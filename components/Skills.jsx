@@ -6,6 +6,11 @@ import redux from "../assets/skills/redux.png";
 import nodejs from "../assets/skills/nodejs.png";
 import postgresql from "../assets/skills/posgresql.png";
 import firebase from "../assets/skills/firebase.png";
+import javascript from "../assets/skills/javascript.png";
+import typescript from "../assets/skills/typescript.png";
+import HTML5 from "../assets/skills/html5.png";
+import CSS3 from "../assets/skills/css3.png";
+import express from "../assets/skills/express.png";
 
 const Skills = () => {
   return (
@@ -73,7 +78,7 @@ const Skills = () => {
           <div className={styles.container_skill1}>
             <div className={styles.container_skill2}>
               <div className={styles.skill_img}>
-                <Image src={nodejs} alt="nodejs" height={64} width={64} />
+                <Image src={javascript} alt="nodejs" height={64} width={64} />
               </div>
               <div className={styles.skill_name}>
                 <h3>JAVASCRIPT</h3>
@@ -83,7 +88,7 @@ const Skills = () => {
           <div className={styles.container_skill1}>
             <div className={styles.container_skill2}>
               <div className={styles.skill_img}>
-                <Image src={nodejs} alt="nodejs" height={64} width={64} />
+                <Image src={typescript} alt="nodejs" height={64} width={64} />
               </div>
               <div className={styles.skill_name}>
                 <h3>TYPESCRIPT</h3>
@@ -93,7 +98,7 @@ const Skills = () => {
           <div className={styles.container_skill1}>
             <div className={styles.container_skill2}>
               <div className={styles.skill_img}>
-                <Image src={nodejs} alt="nodejs" height={64} width={64} />
+                <Image src={HTML5} alt="nodejs" height={64} width={64} />
               </div>
               <div className={styles.skill_name}>
                 <h3>HTML5</h3>
@@ -103,10 +108,20 @@ const Skills = () => {
           <div className={styles.container_skill1}>
             <div className={styles.container_skill2}>
               <div className={styles.skill_img}>
-                <Image src={nodejs} alt="nodejs" height={64} width={64} />
+                <Image src={CSS3} alt="nodejs" height={64} width={64} />
               </div>
               <div className={styles.skill_name}>
                 <h3>CSS3</h3>
+              </div>
+            </div>
+          </div>
+          <div className={styles.container_skill1}>
+            <div className={styles.container_skill2}>
+              <div className={styles.skill_img}>
+                <Image src={express} alt="react" height={64} width={64} />
+              </div>
+              <div className={styles.skill_name}>
+                <h3>EXPRESS</h3>
               </div>
             </div>
           </div>

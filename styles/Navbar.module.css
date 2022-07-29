@@ -145,10 +145,12 @@
 }
 /* ----------media query responsibe ---------- */
 
-@media (min-width: 1536px) {
-  .container2 {
-    padding-left: 4rem;
-    padding-right: 4rem;
+@media (min-width: 640px) {
+  .sidebar_menu_true {
+    width: 60%;
+  }
+  .container_link_connect {
+    width: 80%;
   }
 }
 
@@ -171,11 +173,9 @@
   }
 }
 
-@media (min-width: 640px) {
-  .sidebar_menu_true {
-    width: 60%;
-  }
-  .container_link_connect {
-    width: 80%;
+@media (min-width: 1536px) {
+  .container2 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }

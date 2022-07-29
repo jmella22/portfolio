@@ -5,7 +5,7 @@ import ME from "../assets/photo1654112623-removebg.png";
 
 const About = () => {
   return (
-    <div className={styles.container1}>
+    <div className={styles.container1} id="about">
       <div className={styles.container2}>
         <div className={styles.container3}>
           <p className={styles.about}>About</p>

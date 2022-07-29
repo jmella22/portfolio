@@ -1,0 +1,20 @@
+{
+  "menu": {
+    "title": "Menu",
+    "menu": ["Home", "About", "Skills", "Projects", "Contact"],
+    "linkMenu": ["/#home", "/#about", "/#skills", "/#projects", "/#contact"],
+    "mode": {
+      "light": "Light Mode",
+      "dark": "Dark Mode"
+    }
+  },
+  "home": {
+    "titlePage": "Jose Mella | Developer web Full Stack"
+  },
+  "hero": {
+    "subtitle": "Let's build something together",
+    "title1": "Hi, I'm",
+    "title2": "A Full-Stack Web Developer",
+    "body": "I'm a Full-Stack Web Devepoler specializing in building exceptional digital experiences based on functionalities as well as design. Currently, I'm learning new skill to improve my professional profile."
+  }
+}

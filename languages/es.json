@@ -1,0 +1,20 @@
+{
+  "menu": {
+    "title": "Menú",
+    "menu": ["Inicio", "Sobre MI", "Habilidades", "Proyectos", "Contacto"],
+    "linkMenu": ["/#home", "/#about", "/#skills", "/#projects", "/#contact"],
+    "mode": {
+      "light": "Modo Claro",
+      "dark": "Modo Oscuro"
+    }
+  },
+  "home": {
+    "titlePage": "Jose Mella | Desarrollador web Full Stack"
+  },
+  "hero": {
+    "subtitle": "Construyamos algo juntos",
+    "title1": "Hola, Soy",
+    "title2": "Un Desarrollador Web Full-Stack",
+    "body": "Soy un desarrollador web Full-Stack que se especializa en crear experiencias digitales excepcionales basadas en funcionalidades y diseño. Actualmente, estoy aprendiendo nuevas habilidades para mejorar mi perfil profesional."
+  }
+}
