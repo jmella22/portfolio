@@ -15,6 +15,7 @@ import { FormControl, Select, MenuItem } from "@mui/material";
 export const Selectorlang = () => {
   const router = useRouter();
   const onChangeLan = (e) => {
+    e.preventDefault();
     router.push(router.pathname, router.pathname, { locale: e.target.value });
   };
 

@@ -8,13 +8,65 @@
       "dark": "Dark Mode"
     }
   },
+  "footer": {
+    "title": "A Project by: ",
+    "name": " José Mella"
+  },
   "home": {
     "titlePage": "Jose Mella | Developer web Full Stack"
   },
   "hero": {
-    "subtitle": "Let's build something together",
     "title1": "Hi, I'm",
     "title2": "A Full-Stack Web Developer",
+    "subtitle": "Let's build something together",
     "body": "I'm a Full-Stack Web Devepoler specializing in building exceptional digital experiences based on functionalities as well as design. Currently, I'm learning new skill to improve my professional profile."
+  },
+  "projects": {
+    "title": "Projects",
+    "more": "See more",
+    "projects": [
+      {
+        "title": "Teslo Shop ",
+        "description": "E-comerce inspirada en la tienda de tesla",
+        "images": ["tesloShopHomepage.png", "tesloShopDetalleProducto.png"],
+        "links": ["https://google.com", "https://facebook.com"]
+      },
+      {
+        "title": "Teslo Shop ",
+        "description": "E-comerce inspirada en la tienda de tesla",
+        "images": ["tesloShopHomepage.png", "tesloShopDetalleProducto.png"],
+        "links": ["https://google.com", "https://facebook.com"]
+      },
+      {
+        "title": "Teslo Shop ",
+        "description": "E-comerce inspirada en la tienda de tesla",
+        "images": ["tesloShopHomepage.png", "tesloShopDetalleProducto.png"],
+        "links": ["https://google.com", "https://facebook.com"]
+      }
+    ]
+  },
+  "myself": {
+    "title": "Me and The Developer",
+    "description": [
+      "Since I had my first computer I was interested in the technological world and when I entered university I decided to study electricity, studies that helped me to form my perseverance, my desire to learn and improve myself.",
+      "With time I resumed my desire for the technological world and in 2022 I decided to study web development in a bootcamp, which I have complemented by learning autonomously.",
+      "Join me on this path where I am always eager to continue working and learning more."
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "submit": "Send",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "error": {
+      "name": ["Name is required", "Must be at least 2 characters"],
+      "email": ["Email is required", "Email is not valid"],
+      "subject": ["Subject is required", "Must be at least 2 characters"],
+      "message": ["Message is required", "Must be at least 2 characters"]
+    }
   }
 }

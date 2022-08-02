@@ -3,7 +3,7 @@ import React from "react";
 
 //Next
 import Head from "next/head";
-import { Navbar, Sidemenu } from "../ui";
+import { Footer, Navbar, Sidemenu } from "../ui";
 
 //Other library
 
@@ -13,10 +13,11 @@ import { Navbar, Sidemenu } from "../ui";
 
 export const HomeLayout = ({
   children,
-  title = "ASDF",
-  pageDescription = "ASDF",
+  title = "Jose Mella | Developer Web",
+  pageDescription = "Jose Mella | Developer Web",
   imageFullUrl,
   menu,
+  footer,
 }) => {
   return (
     <>
@@ -31,12 +32,12 @@ export const HomeLayout = ({
         <Navbar menu={menu} />
       </nav>
       <Sidemenu menu={menu} />
-      <main
-        style={{ margin: "80px auto", maxWidth: "1440px", padding: "0px 30px" }}
-      >
+      <main style={{ margin: "auto", maxWidth: "1440px", padding: "0px 30px" }}>
         {children}
       </main>
-      <footer>{/* TODO: custon Footer */}</footer>
+      <footer>
+        <Footer footer={footer} />
+      </footer>
     </>
   );
 };

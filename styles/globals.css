@@ -47,3 +47,22 @@
 .resalt {
   color: #5bc0be;
 }
+
+.twitter:hover {
+  border-color: #00acee;
+  background-color: #00acee;
+}
+
+.linkedin:hover {
+  border-color: #0e76a8;
+  background-color: #0e76a8;
+}
+
+.heigth-section {
+  height: calc(100vh - 100px);
+}
+
+.github:hover {
+  border-color: #c9510c;
+  background-color: #c9510c;
+}

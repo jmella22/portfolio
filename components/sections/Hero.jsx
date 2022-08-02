@@ -4,13 +4,14 @@ import React from "react";
 //Next
 
 //Other Library
-
+import Cookies from "js-cookie";
 //Material Ui
 import { Button, Grid, Link, Stack, Typography } from "@mui/material";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 //Other
 export const Hero = ({ hero }) => {
+  console.log("hero", Cookies.get("theme"));
   return (
     <Grid
       container
@@ -20,46 +21,47 @@ export const Hero = ({ hero }) => {
       alignItems="center"
       height={"100vh"}
       id="home"
-      sx={{ backgroundColor: "red" }}
     >
       <Grid item xs={12} textAlign="center">
-        <Typography variant="subtitle1" color={"primary"} mb={5}>
-          {hero.subtitle}
-        </Typography>
-        <Typography variant="h1" color={"primary"} mb={2}>
+        <Typography
+          variant="h1"
+          color={"primary"}
+          mb={2}
+          mt={10}
+          sx={{ fontSize: "6vw" }}
+        >
           {`${hero.title1} `}
-          <span className="resalt">Jose</span>
+          <span className="resalt" style={{ fontSize: "8vw" }}>
+            Jose
+          </span>
         </Typography>
-        <Typography variant="h1" component={"h1"} color={"primary"}>
+        <Typography
+          variant="h1"
+          component={"h1"}
+          color={"primary"}
+          mb={5}
+          sx={{ fontSize: "6vw" }}
+        >
           {hero.title2}
         </Typography>
-      </Grid>
-      {/* <Grid
-        item
-        xs={12}
-        sm={10}
-        md={8}
-        // lg={6}
-        textAlign="center"
-        // mb={"auto"}
-        mt={2}
-      >
-        <Typography>{hero.body}</Typography>
-      </Grid> */}
-      <Grid item xs={12} sx={{ alignItems: "center" }} mb={"auto"}>
-        <Stack
-          direction="row"
-          spacing={2}
-          sx={{ justifyContent: "center", backgroundColor: "blue" }}
+        <Typography
+          variant="subtitle1"
+          color={"secondary"}
+          sx={{ fontSize: "3vw", fontStyle: "italic" }}
         >
+          {hero.subtitle}
+        </Typography>
+      </Grid>
+      <Grid item xs={12} sx={{ alignItems: "center" }} mb={"auto"}>
+        <Stack direction="row" spacing={2} sx={{ justifyContent: "center" }}>
           <Link
             href="https://www.linkedin.com/in/josemellar/"
             target={"_blank"}
             rel="noopener"
           >
             <Button
-              variant="contained"
-              color="secondary"
+              variant="outlined"
+              className={"linkedin"}
               startIcon={<FaLinkedinIn />}
             >
               LinkedIn
@@ -70,17 +72,25 @@ export const Hero = ({ hero }) => {
             target={"_blank"}
             rel="noopener"
           >
-            <Button variant="outlined" startIcon={<FaGithub />}>
+            <Button
+              variant="outlined"
+              className={"github"}
+              startIcon={<FaGithub />}
+            >
               GitHub
             </Button>
           </Link>
           <Link
-            href="https://github.com/jmella22"
+            href="https://twitter.com/jose_mella_r"
             target={"_blank"}
             rel="noopener"
           >
-            <Button variant="outlined" startIcon={<FaTwitter />}>
-              GitHub
+            <Button
+              variant="outlined"
+              className="twitter"
+              startIcon={<FaTwitter />}
+            >
+              Twitter
             </Button>
           </Link>
         </Stack>

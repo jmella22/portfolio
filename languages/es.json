@@ -8,13 +8,65 @@
       "dark": "Modo Oscuro"
     }
   },
+  "footer": {
+    "title": "Un Proyecto de: ",
+    "name": " José Mella"
+  },
   "home": {
     "titlePage": "Jose Mella | Desarrollador web Full Stack"
   },
   "hero": {
-    "subtitle": "Construyamos algo juntos",
     "title1": "Hola, Soy",
     "title2": "Un Desarrollador Web Full-Stack",
+    "subtitle": "Construyamos algo juntos",
     "body": "Soy un desarrollador web Full-Stack que se especializa en crear experiencias digitales excepcionales basadas en funcionalidades y diseño. Actualmente, estoy aprendiendo nuevas habilidades para mejorar mi perfil profesional."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "more": "Ver Más",
+    "projects": [
+      {
+        "title": "Teslo Shop ",
+        "description": "E-comerce inspirada en la tienda de tesla",
+        "images": ["tesloShopHomepage.png", "tesloShopDetalleProducto.png"],
+        "links": ["https://google.com", "https://facebook.com"]
+      },
+      {
+        "title": "Teslo Shop ",
+        "description": "E-comerce inspirada en la tienda de tesla",
+        "images": ["tesloShopHomepage.png", "tesloShopDetalleProducto.png"],
+        "links": ["https://google.com", "https://facebook.com"]
+      },
+      {
+        "title": "Teslo Shop ",
+        "description": "E-comerce inspirada en la tienda de tesla",
+        "images": ["tesloShopHomepage.png", "tesloShopDetalleProducto.png"],
+        "links": ["https://google.com", "https://facebook.com"]
+      }
+    ]
+  },
+  "myself": {
+    "title": "Yo y El Desarrollador",
+    "description": [
+      "Desde que tuve mi primer computador me intereso el mundo tecnologico y  cuando entre a la universidad decidí estudiar electricidad, estudios que me sirvieron para formar mi constancía, mis ganas de aprender y superarme.",
+      "Con él tiempo retome mis ganas por el mundo tecnologico y el año 2022 decidí estudiar desarrollo web en un bootcamp, el cual he complementado aprendiendo de forma autonoma.",
+      "Acompañame en este camino donde estoy siempre deseoso de seguir trabajando y aprendiendo más."
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "submit": "Enviar",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo",
+      "subject": "Asunto",
+      "message": "Mensaje"
+    },
+    "error": {
+      "name": ["El Nombre es requerido", "Deben ser mínimo 2 caracteres"],
+      "email": ["El Correo es requerido", "El correo no parece ser válido"],
+      "subject": ["El Asunto es requerido", "Deben ser mínimo 2 caracteres"],
+      "message": ["El Mensaje es requerido", "Deben ser mínimo 2 caracteres"]
+    }
   }
 }

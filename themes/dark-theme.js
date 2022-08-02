@@ -7,7 +7,7 @@ export const darkTheme = createTheme({
       main: "#EBEBEB",
     },
     secondary: {
-      main: "#254dbb",
+      main: "#5bc0be",
     },
     info: {
       main: "#000000",
@@ -62,7 +62,7 @@ export const darkTheme = createTheme({
           boxShadow: "none",
           borderRadius: 10,
           ":hover": {
-            // backgroundColor: "rgba(255,255,255,0.05)",
+            backgroundColor: "rgba(91,192,190,0.5)",
             transition: "all 0.3s ease-in-out",
           },
         },

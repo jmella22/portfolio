@@ -26,10 +26,10 @@ import { Selectorlang } from ".";
 
 export const Navbar = ({ menu }) => {
   const { colorMode, toogleColorMode, toogleSideMenu } = useContext(UiContext);
-
-  const onChangeMode = () => {
-    const newMode = colorMode === "light" ? "dark" : "light";
-    toogleColorMode(newMode);
+  console.log("navbar", colorMode);
+  const onChangeMode = (e) => {
+    e.preventDefault();
+    toogleColorMode(colorMode === "light" ? "dark" : "light");
   };
 
   return (
@@ -45,7 +45,7 @@ export const Navbar = ({ menu }) => {
         <Box flex={1} />
         <Box className="fadeIn" sx={{ display: { xs: "none", md: "flex" } }}>
           {menu.menu.map((m, i) => (
-            <NextLink href={`/prueba${menu.linkMenu[i]}`} passHref key={i}>
+            <NextLink href={`${menu.linkMenu[i]}`} passHref key={i}>
               <Link>
                 <Button color="info">{m}</Button>
               </Link>

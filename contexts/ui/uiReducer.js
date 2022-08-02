@@ -11,7 +11,13 @@ export const uiReducer = (state, action) => {
         colorMode: action.payload,
       };
 
+    case "COLORMODE_COOKIES_LOADING":
+      return {
+        ...state,
+        colorMode: action.payload,
+      };
+
     default:
-      return state;
+      return { ...state };
   }
 };
