@@ -8,11 +8,11 @@ import React from "react";
 //Material Ui
 import { Box, Button, Typography } from "@mui/material";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
+
+//Personal
 import { ProjectsSlice } from "../products";
 
-//Other
-
-export const Proyects = ({ projects }) => {
+export const Projects = ({ projects }) => {
   return (
     <Box mt={2} sx={{ textAlign: "center" }}>
       <Typography variant="h1" color={"secondary"} fontSize={"4vw"} mb={2}>

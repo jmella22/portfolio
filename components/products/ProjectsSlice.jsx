@@ -6,19 +6,20 @@ import React, { useContext, useState } from "react";
 //Other Library
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+
 //Material Ui
 import { Typography } from "@mui/material";
 
-//Other
-import style from "./ProductSlideshow.module.css";
+//Personal
 import { UiContext } from "../../contexts";
+import style from "./ProductSlideshow.module.css";
 
 export const ProjectsSlice = ({ projects }) => {
   const { colorMode } = useContext(UiContext);
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <Slide easing="ease" defaultIndex={7000} indicators>
+    <Slide easing="ease" defaultIndex={7000}>
       {projects.map((project, i) => {
         const url = `images/projects/${project.images[0]}`;
         return (
@@ -46,7 +47,6 @@ export const ProjectsSlice = ({ projects }) => {
                   }}
                 >
                   <Typography variant="h1">{project.title}</Typography>
-                  {/* <Typography variant="h3">{project.description}</Typography> */}
                 </div>
               )}
             </div>

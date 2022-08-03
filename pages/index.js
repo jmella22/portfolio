@@ -9,13 +9,13 @@ import React from "react";
 
 //Personal
 import { HomeLayout } from "../components/layouts/HomeLayout";
-import { Contact, Hero, Myself, Proyects } from "../components/sections";
+import { Contact, Hero, Myself, Projects } from "../components/sections";
 
 const prueba = ({ title, menu, hero, projects, myself, contact, footer }) => {
   return (
     <HomeLayout title={title} menu={menu} footer={footer}>
       <Hero hero={hero} />
-      <Proyects projects={projects} />
+      <Projects projects={projects} />
       <Myself myself={myself} />
       <Contact contact={contact} />
     </HomeLayout>

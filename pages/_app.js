@@ -16,11 +16,10 @@ import { UiProvider } from "../contexts";
 import { darkTheme, lightTheme } from "../themes";
 
 function MyApp({ Component, pageProps }) {
-  // const cookieTheme = Cookies.get("theme") ? Cookies.get("theme") : "light";
-  const [colorModeTheme, setColorModeTheme] = useState("light");
+  const [colorModeTheme, setColorModeTheme] = useState("dark");
 
   useEffect(() => {
-    const cookiesTheme = Cookies.get("theme") ? Cookies.get("theme") : "light";
+    const cookiesTheme = Cookies.get("theme") ? Cookies.get("theme") : "dark";
     setColorModeTheme(cookiesTheme);
   }, []);
 

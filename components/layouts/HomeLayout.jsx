@@ -3,13 +3,13 @@ import React from "react";
 
 //Next
 import Head from "next/head";
-import { Footer, Navbar, Sidemenu } from "../ui";
 
 //Other library
 
 //Material UI
 
 //Personal
+import { Footer, Navbar, Sidemenu } from "../ui";
 
 export const HomeLayout = ({
   children,
@@ -32,7 +32,13 @@ export const HomeLayout = ({
         <Navbar menu={menu} />
       </nav>
       <Sidemenu menu={menu} />
-      <main style={{ margin: "auto", maxWidth: "1440px", padding: "0px 30px" }}>
+      <main
+        style={{
+          margin: "auto",
+          maxWidth: "1440px",
+          padding: "0px 30px",
+        }}
+      >
         {children}
       </main>
       <footer>

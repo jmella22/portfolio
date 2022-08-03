@@ -4,19 +4,18 @@ import React from "react";
 //Next
 
 //Other Library
-import Cookies from "js-cookie";
+
 //Material Ui
 import { Button, Grid, Link, Stack, Typography } from "@mui/material";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
-//Other
+//Personal
+
 export const Hero = ({ hero }) => {
-  console.log("hero", Cookies.get("theme"));
   return (
     <Grid
       container
       spacing={3}
-      // direction={"column"}
       justifyContent={"center"}
       alignItems="center"
       height={"100vh"}

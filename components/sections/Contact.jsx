@@ -1,25 +1,66 @@
 //React
-import React from "react";
+import React, { useContext, useRef, useState } from "react";
+
 //Next
+import { useRouter } from "next/router";
 
 //Other Library
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
 //Material Ui
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
-import { isValidEmail } from "../../utils";
+import {
+  Avatar,
+  Box,
+  Button,
+  Grid,
+  Modal,
+  TextField,
+  Typography,
+} from "@mui/material";
+import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 
 //Other
+import { isValidEmail } from "../../utils";
+import { UiContext } from "../../contexts";
 
 export const Contact = ({ contact }) => {
+  const { colorMode } = useContext(UiContext);
+  const [isSend, setIsSend] = useState(false);
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
+  const router = useRouter();
+
+  const form = useRef();
+
   const onSendMail = ({ name, email, subject, message }) => {
-    // console.log(name, email, subject, message);
+    emailjs
+      .sendForm(
+        `${process.env.NEXT_PUBLIC_SERVICE_ID}`,
+        `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
+        form.current,
+        `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`
+      )
+      .then(
+        (result) => {
+          reset();
+          setIsSend(true);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  };
+
+  const handleClose = () => {
+    router.replace("/");
+    setIsSend(false);
   };
 
   const isEmail = (email) => {
@@ -31,7 +72,7 @@ export const Contact = ({ contact }) => {
       <Typography variant="h1" color={"secondary"} fontSize={"4vw"} mb={2}>
         {contact.title}
       </Typography>
-      <form onSubmit={handleSubmit(onSendMail)} noValidate>
+      <form onSubmit={handleSubmit(onSendMail)} noValidate ref={form}>
         <Box
           sx={{
             display: "flex",
@@ -45,6 +86,7 @@ export const Contact = ({ contact }) => {
             <Grid item xs={12} sm={6}>
               <TextField
                 label={contact.form.name}
+                name="name"
                 type={"text"}
                 variant="outlined"
                 fullWidth
@@ -62,6 +104,7 @@ export const Contact = ({ contact }) => {
             <Grid item xs={12} sm={6}>
               <TextField
                 label={contact.form.email}
+                name="email"
                 variant="outlined"
                 type={"email"}
                 fullWidth
@@ -76,6 +119,7 @@ export const Contact = ({ contact }) => {
             <Grid item xs={12}>
               <TextField
                 label={contact.form.subject}
+                name="subject"
                 variant="outlined"
                 type={"text"}
                 fullWidth
@@ -93,6 +137,7 @@ export const Contact = ({ contact }) => {
             <Grid item xs={12}>
               <TextField
                 label={contact.form.message}
+                name="message"
                 variant="outlined"
                 type={"text"}
                 fullWidth
@@ -121,6 +166,39 @@ export const Contact = ({ contact }) => {
           </Button>
         </Box>
       </form>
+      <Modal
+        open={isSend}
+        onClose={handleClose}
+        sx={{ backdropFilter: "blur(8px)", transition: "all 0.5s ease-out" }}
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: `${
+              colorMode === "light" ? "rgba(255,255,255,1)" : "rgba(0,0,0,1)"
+            }`,
+            border: "3px solid #5bc0be",
+            borderRadius: 5,
+            p: 2,
+            width: { xs: "90%", sm: "80%", md: "70%", lg: "60%" },
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            mb: 2,
+          }}
+        >
+          <Typography variant="h4" component="h2" mb={4}>
+            {contact.modal}
+          </Typography>
+          <Avatar sx={{ bgcolor: "transparent", width: 120, height: 120 }}>
+            <CheckCircleOutlinedIcon color="secondary" sx={{ fontSize: 120 }} />
+          </Avatar>
+        </Box>
+      </Modal>
     </Box>
   );
 };

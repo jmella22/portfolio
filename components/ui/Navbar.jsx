@@ -26,7 +26,7 @@ import { Selectorlang } from ".";
 
 export const Navbar = ({ menu }) => {
   const { colorMode, toogleColorMode, toogleSideMenu } = useContext(UiContext);
-  console.log("navbar", colorMode);
+
   const onChangeMode = (e) => {
     e.preventDefault();
     toogleColorMode(colorMode === "light" ? "dark" : "light");

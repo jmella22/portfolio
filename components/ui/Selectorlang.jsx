@@ -2,7 +2,6 @@
 import React from "react";
 
 //Next
-
 import { useRouter } from "next/router";
 
 //Other library

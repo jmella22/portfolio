@@ -14,9 +14,6 @@ import { UiContext } from "../../contexts";
 export const Footer = ({ footer }) => {
   const { colorMode } = useContext(UiContext);
 
-  const bg =
-    colorMode === "light" ? "rgba(0,0,0,0.2)" : "rgba(255,255,255,0.2)";
-
   return (
     <Box
       sx={{
@@ -24,7 +21,9 @@ export const Footer = ({ footer }) => {
         alignItems: "center",
         justifyContent: "center",
         paddingY: 2,
-        backgroundColor: bg,
+        backgroundColor: `${
+          colorMode === "light" ? "rgba(0,0,0,0.2)" : "rgba(255,255,255,0.2)"
+        }`,
       }}
     >
       <Typography>2022 -</Typography>

@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 
 //Next
-import NextLink from "next/link";
+import { useRouter } from "next/router";
 
 //Other library
 
@@ -41,10 +41,17 @@ const iconMenu = [
 export const Sidemenu = ({ menu }) => {
   const { isMenuOpen, toogleSideMenu, colorMode, toogleColorMode } =
     useContext(UiContext);
+  const router = useRouter();
 
   const onChangeMode = () => {
     const newMode = colorMode === "light" ? "dark" : "light";
     toogleColorMode(newMode);
+  };
+
+  const navigateTo = (url, e) => {
+    e.preventDefault();
+    router.push(url);
+    toogleSideMenu();
   };
 
   return (
@@ -58,13 +65,15 @@ export const Sidemenu = ({ menu }) => {
         <List>
           <ListSubheader>{menu.title}</ListSubheader>
           {menu.menu.map((m, i) => (
-            <ListItem button key={i}>
+            <ListItem
+              button
+              key={i}
+              onClick={(e) => navigateTo(menu.linkMenu[i], e)}
+            >
               <ListItemIcon>{iconMenu[i]}</ListItemIcon>
               <ListItemText primary={m} />
             </ListItem>
           ))}
-          {/* onClick={() => navigateTo("/category/women")} */}
-          {/* Admin */}
           <Divider />
           <ListItem button onClick={onChangeMode}>
             {colorMode === "light" ? (

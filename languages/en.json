@@ -2,7 +2,7 @@
   "menu": {
     "title": "Menu",
     "menu": ["Home", "About", "Skills", "Projects", "Contact"],
-    "linkMenu": ["/#home", "/#about", "/#skills", "/#projects", "/#contact"],
+    "linkMenu": ["/", "/#about", "/#skills", "/#projects", "/contact"],
     "mode": {
       "light": "Light Mode",
       "dark": "Dark Mode"
@@ -54,6 +54,7 @@
     ]
   },
   "contact": {
+    "titlePage": "Jose Mella | Contact",
     "title": "Contact",
     "submit": "Send",
     "form": {
@@ -67,6 +68,7 @@
       "email": ["Email is required", "Email is not valid"],
       "subject": ["Subject is required", "Must be at least 2 characters"],
       "message": ["Message is required", "Must be at least 2 characters"]
-    }
+    },
+    "modal": "Email sent successfully!"
   }
 }
