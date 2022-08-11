@@ -1,25 +1,46 @@
-import Head from "next/head";
-import About from "../components/About";
-import Main from "../components/Main";
-import Navbar from "../components/Navbar";
-import Skills from "../components/Skills";
+//React
+import React from "react";
 
-export default function Home() {
+//Next
+
+//Other library
+
+//Material UI
+
+//Personal
+import { HomeLayout } from "../components/layouts/HomeLayout";
+import { Contact, Hero, Myself, Projects } from "../components/sections";
+
+const prueba = ({ title, menu, hero, projects, myself, contact, footer }) => {
   return (
-    <div>
-      <Head>
-        <title>Jose Mella | Developer Full Stack</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta content="initial-scale=1.0, width=device-width" name="viewport" />
-        {/* Inicio de meta tags de licencia - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
-        <meta content="jmella22" name="author" />
-        <meta content="Jose Mella" name="copyright" />
-        {/* Fin de meta tags de licencia */}
-      </Head>
-      <Navbar />
-      <Main />
-      <About />
-      <Skills />
-    </div>
+    <HomeLayout title={title} menu={menu} footer={footer}>
+      <Hero hero={hero} />
+      <Projects projects={projects} />
+      <Myself myself={myself} />
+      <Contact contact={contact} />
+    </HomeLayout>
   );
-}
+};
+
+// You should use getStaticProps when:
+//- The data required to render the page is available at build time ahead of a user’s request.
+//- The data comes from a headless CMS.
+//- The data can be publicly cached (not user-specific).
+//- The page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance.
+export const getStaticProps = async ({ locale }) => {
+  const response = await import(`../languages/${locale}.json`); // your fetch function here
+
+  return {
+    props: {
+      title: response.home.titlePage,
+      menu: response.menu,
+      hero: response.hero,
+      projects: response.projects,
+      myself: response.myself,
+      contact: response.contact,
+      footer: response.footer,
+    },
+  };
+};
+
+export default prueba;

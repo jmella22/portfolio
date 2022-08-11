@@ -1,0 +1,144 @@
+{
+  "menu": {
+    "title": "Menu",
+    "menu": ["Home", "About", "Skills", "Projects", "Contact"],
+    "linkMenu": ["/", "/#about", "/#skills", "/projects", "/contact"],
+    "mode": {
+      "light": "Light Mode",
+      "dark": "Dark Mode"
+    }
+  },
+  "footer": {
+    "title": "A Project by: ",
+    "name": " José Mella"
+  },
+  "home": {
+    "titlePage": "Jose Mella | Developer web Full Stack"
+  },
+  "hero": {
+    "title1": "Hi, I'm",
+    "title2": "A Full-Stack Web Developer",
+    "subtitle": "Let's build something together",
+    "body": "I'm a Full-Stack Web Devepoler specializing in building exceptional digital experiences based on functionalities as well as design. Currently, I'm learning new skill to improve my professional profile."
+  },
+  "projects": {
+    "titlePage": "Jose Mella | Projects",
+    "title": "Projects",
+    "more": "See more",
+    "projects": [
+      {
+        "title": "Puppu Point ",
+        "description": "Aplicacion que conecta a paseadores de perros con personas que requieren de ese servicio",
+        "descriptionFull": [
+          "Aplicación que busca solucionar el problema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
+        ],
+        "tecnologi": [
+          "Reacjs",
+          "Javascript",
+          "Redux",
+          "Nodejs",
+          "Expressjs",
+          "PosgreSQL",
+          "Sequelize",
+          "MercadoPago",
+          "Nodemailer",
+          "Handlebars",
+          "JWT",
+          "Chakra UI",
+          "Chart JS",
+          "Geolocation"
+        ],
+        "images": [
+          "puppypoint-ShortLanding-dark.png",
+          "puppypoint-Shortlanding-light.png",
+          "puppypoint-HomeOwner-dark.png",
+          "puppyponit-HomeWalker-light.png",
+          "puppypoint-Login-dark.png",
+          "puppypoint-Paseos-dark.png",
+          "puppypoint-Blog-dark.png",
+          "puppyponit-HomeAdmin.dark.png"
+        ],
+        "imagesFull": [],
+        "links": [
+          "https://puppypoint.vercel.app/",
+          "https://github.com/jmella22/Puppy-Point"
+        ]
+      },
+      {
+        "title": "Pokemon App ",
+        "description": "Aplicacion que se alimenta de la Api de Pokemon",
+        "descriptionFull": [
+          "Aplicación que muestra en pantalla los distintos pokemons que existen, donde podras ver su detalle y agregarlos a favoritos."
+        ],
+        "tecnologi": ["Nextjs", "Typescript", "Next Ui", "Pokemon Api"],
+        "images": [
+          "pokemonApp-Home-dark.png",
+          "pokemonApp-Home-light.png",
+          "pokemonApp-Detalle-dark.png",
+          "pokemonApp-Detalle-light.png",
+          "pokemonApp-Favorito-dark.png",
+          "pokemonApp-Favorito-light.png"
+        ],
+        "imagesFull": [],
+        "links": [
+          "https://nextjs-pokemon-app-151.vercel.app/",
+          "https://github.com/jmella22/nextjs-pokemon-app"
+        ]
+      },
+      {
+        "title": "Wather App ",
+        "description": "Aplicacion que muestra el clima de distintas ciudades",
+        "descriptionFull": [
+          "Aplicación que busca solucionar el prkblema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
+        ],
+        "tecnologi": ["Reacjs", "Javascript"],
+        "images": ["watherApp-Home.png", "watherApp-Ciudades.png"],
+        "imagesFull": [],
+        "links": [
+          "https://puppypoint.vercel.app/",
+          "https://github.com/jmella22/Puppy-Point"
+        ]
+      },
+      {
+        "title": "Wather App ",
+        "description": "Aplicacion que muestra el clima de distintas ciudades",
+        "descriptionFull": [
+          "Aplicación que busca solucionar el prkblema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
+        ],
+        "tecnologi": ["Reacjs", "Javascript"],
+        "images": ["watherApp-Home.png", "watherApp-Ciudades.png"],
+        "imagesFull": [],
+        "links": [
+          "https://puppypoint.vercel.app/",
+          "https://github.com/jmella22/Puppy-Point"
+        ]
+      }
+    ]
+  },
+  "myself": {
+    "title": "Me and The Developer",
+    "description": [
+      "Since I had my first computer I was interested in the technological world and when I entered university I decided to study electricity, studies that helped me to form my perseverance, my desire to learn and improve myself.",
+      "With time I resumed my desire for the technological world and in 2022 I decided to study web development in a bootcamp, which I have complemented by learning autonomously.",
+      "Join me on this path where I am always eager to continue working and learning more."
+    ]
+  },
+  "contact": {
+    "titlePage": "Jose Mella | Contact",
+    "title": "Contact",
+    "submit": "Send",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "error": {
+      "name": ["Name is required", "Must be at least 2 characters"],
+      "email": ["Email is required", "Email is not valid"],
+      "subject": ["Subject is required", "Must be at least 2 characters"],
+      "message": ["Message is required", "Must be at least 2 characters"]
+    },
+    "modal": "Email sent successfully!"
+  }
+}
