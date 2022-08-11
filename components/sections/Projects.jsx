@@ -2,6 +2,7 @@
 import React from "react";
 
 //Next
+import { useRouter } from "next/router";
 
 //Other Library
 
@@ -13,6 +14,12 @@ import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import { ProjectsSlice } from "../products";
 
 export const Projects = ({ projects }) => {
+  const router = useRouter();
+
+  const handleNavigate = () => {
+    router.push("/projects");
+  };
+
   return (
     <Box mt={2} sx={{ textAlign: "center" }}>
       <Typography variant="h1" color={"secondary"} fontSize={"4vw"} mb={2}>
@@ -31,6 +38,7 @@ export const Projects = ({ projects }) => {
           size="large"
           color="secondary"
           endIcon={<ArrowForwardOutlinedIcon />}
+          onClick={handleNavigate}
           sx={{ marginY: 2 }}
         >
           {projects.more}

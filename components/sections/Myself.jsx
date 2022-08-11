@@ -23,12 +23,12 @@ export const Myself = ({ myself }) => {
         <Typography variant="h1" color={"secondary"} fontSize={"4vw"} mb={2}>
           {myself.title}
         </Typography>
-        <Typography>{myself.description[0]}</Typography>
-        <br />
-        <Typography>{myself.description[1]}</Typography>
-        <br />
-        <Typography>{myself.description[2]}</Typography>
-        <br />
+        {myself.description.map((d, i) => (
+          <div key={1}>
+            <Typography>{d}</Typography>
+            <br />
+          </div>
+        ))}
       </Grid>
     </Grid>
   );

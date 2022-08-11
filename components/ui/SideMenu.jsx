@@ -64,16 +64,16 @@ export const Sidemenu = ({ menu }) => {
       <Box sx={{ width: 250, paddingTop: 1 }}>
         <List>
           <ListSubheader>{menu.title}</ListSubheader>
-          {/* {menu.menu.map((m, i) => (
+          {menu.menu.map((m, i) => (
             <ListItem
               key={i}
               button
-              onClick={(e) => navigateTo(menu.linkMenu[i], e)}s
+              onClick={(e) => navigateTo(menu.linkMenu[i], e)}
             >
               <ListItemIcon>{iconMenu[i]}</ListItemIcon>
               <ListItemText primary={m} />
             </ListItem>
-          ))} */}
+          ))}
           <Divider />
           <ListItem button onClick={onChangeMode}>
             {colorMode === "light" ? (
