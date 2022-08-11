@@ -21,7 +21,7 @@ export const ProjectsSlice = ({ projects }) => {
   return (
     <Slide easing="ease" defaultIndex={7000}>
       {projects.map((project, i) => {
-        const url = `images/projects/${project.images[0]}`;
+        const url = `/Images/projects/${project.images[0]}`;
         return (
           <div
             key={i}
