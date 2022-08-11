@@ -20,7 +20,7 @@ import {
 } from "@mui/material";
 import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 
-//Other
+//Personal
 import { isValidEmail } from "../../utils";
 import { UiContext } from "../../contexts";
 

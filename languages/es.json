@@ -2,7 +2,7 @@
   "menu": {
     "title": "Menú",
     "menu": ["Inicio", "Sobre MI", "Habilidades", "Proyectos", "Contacto"],
-    "linkMenu": ["/", "/#about", "/#skills", "/#projects", "/contact"],
+    "linkMenu": ["/", "/#about", "/#skills", "/projects", "/contact"],
     "mode": {
       "light": "Modo Claro",
       "dark": "Modo Oscuro"
@@ -22,26 +22,96 @@
     "body": "Soy un desarrollador web Full-Stack que se especializa en crear experiencias digitales excepcionales basadas en funcionalidades y diseño. Actualmente, estoy aprendiendo nuevas habilidades para mejorar mi perfil profesional."
   },
   "projects": {
+    "titlePage": "Jose Mella | Proyectos",
     "title": "Proyectos",
     "more": "Ver Más",
     "projects": [
       {
-        "title": "Teslo Shop ",
-        "description": "E-comerce inspirada en la tienda de tesla",
-        "images": ["tesloShopHomepage.png", "tesloShopDetalleProducto.png"],
-        "links": ["https://google.com", "https://facebook.com"]
+        "title": "Puppu Point ",
+        "description": "Aplicacion que conecta a paseadores de perros con personas que requieren de ese servicio",
+        "descriptionFull": [
+          "Aplicación que busca solucionar el problema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
+        ],
+        "tecnologi": [
+          "Reacjs",
+          "Javascript",
+          "Redux",
+          "Nodejs",
+          "Expressjs",
+          "PosgreSQL",
+          "Sequelize",
+          "MercadoPago",
+          "Nodemailer",
+          "Handlebars",
+          "JWT",
+          "Chakra UI",
+          "Chart JS",
+          "Geolocation"
+        ],
+        "images": [
+          "puppypoint-ShortLanding-dark.png",
+          "puppypoint-Shortlanding-light.png",
+          "puppypoint-HomeOwner-dark.png",
+          "puppyponit-HomeWalker-light.png",
+          "puppypoint-Login-dark.png",
+          "puppypoint-Paseos-dark.png",
+          "puppypoint-Blog-dark.png",
+          "puppyponit-HomeAdmin.dark.png"
+        ],
+        "imagesFull": [],
+        "links": [
+          "https://puppypoint.vercel.app/",
+          "https://github.com/jmella22/Puppy-Point"
+        ]
       },
       {
-        "title": "Teslo Shop ",
-        "description": "E-comerce inspirada en la tienda de tesla",
-        "images": ["tesloShopHomepage.png", "tesloShopDetalleProducto.png"],
-        "links": ["https://google.com", "https://facebook.com"]
+        "title": "Pokemon App ",
+        "description": "Aplicacion que se alimenta de la Api de Pokemon",
+        "descriptionFull": [
+          "Aplicación que muestra en pantalla los distintos pokemons que existen, donde podras ver su detalle y agregarlos a favoritos."
+        ],
+        "tecnologi": ["Nextjs", "Typescript", "Next Ui", "Pokemon Api"],
+        "images": [
+          "pokemonApp-Home-dark.png",
+          "pokemonApp-Home-light.png",
+          "pokemonApp-Detalle-dark.png",
+          "pokemonApp-Detalle-light.png",
+          "pokemonApp-Favorito-dark.png",
+          "pokemonApp-Favorito-light.png"
+        ],
+        "imagesFull": [],
+        "links": [
+          "https://nextjs-pokemon-app-151.vercel.app/",
+          "https://github.com/jmella22/nextjs-pokemon-app"
+        ]
       },
       {
-        "title": "Teslo Shop ",
-        "description": "E-comerce inspirada en la tienda de tesla",
-        "images": ["tesloShopHomepage.png", "tesloShopDetalleProducto.png"],
-        "links": ["https://google.com", "https://facebook.com"]
+        "title": "Wather App ",
+        "description": "Aplicacion que muestra el clima de distintas ciudades",
+        "descriptionFull": [
+          "Aplicación que busca solucionar el prkblema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
+        ],
+        "tecnologi": ["Reacjs", "Javascript"],
+        "images": ["watherApp-Home.png", "watherApp-Ciudades.png"],
+        "imagesFull": [],
+        "links": [
+          "https://puppypoint.vercel.app/",
+          "https://github.com/jmella22/Puppy-Point"
+        ]
+      },
+      {
+        "title": "Wather App ",
+        "description": "Aplicacion que muestra el clima de distintas ciudades",
+        "descriptionFull": [
+          "Aplicación que busca solucionar el prkblema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
+        ],
+        "tecnologi": ["Reacjs", "Javascript"],
+        "images": ["watherApp-Home.png", "watherApp-Ciudades.png"],
+        "imagesFull": [],
+        "links": [
+          "https://puppypoint.vercel.app/",
+          "https://github.com/jmella22/Puppy-Point"
+        ]
       }
     ]
   },
