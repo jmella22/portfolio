@@ -31,11 +31,11 @@ import { UiContext } from "../../contexts";
 import { Selectorlang } from "./Selectorlang";
 
 const iconMenu = [
-  <HomeOutlinedIcon />,
-  <PermIdentityOutlinedIcon />,
-  <ConstructionOutlinedIcon />,
-  <FileOpenOutlinedIcon />,
-  <EmailOutlinedIcon />,
+  <HomeOutlinedIcon key={0} />,
+  <PermIdentityOutlinedIcon key={1} />,
+  <ConstructionOutlinedIcon key={2} />,
+  <FileOpenOutlinedIcon key={3} />,
+  <EmailOutlinedIcon key={4} />,
 ];
 
 export const Sidemenu = ({ menu }) => {
@@ -70,7 +70,7 @@ export const Sidemenu = ({ menu }) => {
               button
               onClick={(e) => navigateTo(menu.linkMenu[i], e)}
             >
-              <ListItemIcon>{iconMenu[i]}</ListItemIcon>
+              <ListItemIcon key={1}>{iconMenu[i]}</ListItemIcon>
               <ListItemText primary={m} />
             </ListItem>
           ))}
