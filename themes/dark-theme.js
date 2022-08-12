@@ -75,8 +75,10 @@ export const darkTheme = createTheme({
       },
       styleOverrides: {
         root: {
-          boxShadow: "0px 5px 5px rgba(255,255,255,0.05)",
-          borderRadius: "10px",
+          borderRadius: "12px",
+          ":hover": {
+            border: "1px solid #5bc0be",
+          },
         },
       },
     },
