@@ -21,6 +21,7 @@ import {
 
 export const ProjectCard = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const projectImage = useMemo(() => {
     return isHovered
@@ -31,8 +32,9 @@ export const ProjectCard = ({ project }) => {
   return (
     <Grid
       item
-      xs={6}
-      sm={4}
+      xs={12}
+      sm={6}
+      md={4}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -45,14 +47,14 @@ export const ProjectCard = ({ project }) => {
                 image={projectImage}
                 alt={project.title}
                 className="fadeIn"
-                // onLoad={() => setIsImageLoaded(true)}
+                onLoad={() => setIsImageLoaded(true)}
               />
             </CardActionArea>
           </Link>
         </NextLink>
       </Card>
       <Box
-        // sx={{ mt: 1, display: isImageLoaded ? "block" : "none" }}
+        sx={{ mt: 1, display: isImageLoaded ? "block" : "none" }}
         className="fadeIn"
       >
         <Typography fontWeight={700} mb={1} mt={1}>

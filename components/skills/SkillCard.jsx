@@ -7,6 +7,7 @@ import React from "react";
 
 //Material Ui
 import {
+  Avatar,
   Box,
   Card,
   CardActionArea,
@@ -14,10 +15,10 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-
+import { SiNextdotjs } from "react-icons/si";
 //Personal
 
-export const SkillCard = ({ skill }) => {
+export const SkillCard = ({ skill, icon }) => {
   return (
     <Grid
       item
@@ -30,20 +31,22 @@ export const SkillCard = ({ skill }) => {
     >
       <Card
         sx={{
-          height: "250px",
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
-          paddingX: "10px",
+          padding: "10px",
         }}
       >
-        <CardMedia
+        {/* <CardMedia
           component={"img"}
           image={`/Images/skills/${skill[1]}`}
           alt={skill[0]}
           className="fadeIn"
           // onLoad={() => setIsImageLoaded(true)}
-        />
+        /> */}
+        <Avatar sx={{ bgcolor: "transparent", width: 200, height: 200 }}>
+          {icon}
+        </Avatar>
       </Card>
       <Box
         textAlign={"center"}
