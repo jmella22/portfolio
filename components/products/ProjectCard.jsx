@@ -35,8 +35,8 @@ export const ProjectCard = ({ project }) => {
       xs={12}
       sm={6}
       md={4}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      //   onMouseEnter={() => setIsHovered(true)}
+      //   onMouseLeave={() => setIsHovered(false)}
     >
       <Card>
         <NextLink href={`/`} passHref prefetch={false}>

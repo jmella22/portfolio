@@ -182,7 +182,13 @@
   },
   "about": {
     "titlePage": "Jose Mella | Sobre mi",
-    "title": "Sobre Mi"
+    "title": "Sobre Mi",
+    "description": [
+      "Soy un desarrollador Full-Stack ubicado en Chile. Tengo una gran pasión por el desarrollo web y constantemente estoy mejorando mis conocimientos.",
+      "Soy una persona Organizada, solucionador de problemas. Aficionado a pasear en bicicleta, el aire libre, cocinar y el cine.",
+      "Estoy interesado en proyectos desafiantes y que permitan la cratividad"
+    ],
+    "cv": "Descargar CV"
   },
   "notfound": {
     "titlePage": "Pagina No Encontrada",

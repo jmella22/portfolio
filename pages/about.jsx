@@ -6,7 +6,8 @@ import React from "react";
 //Other library
 
 //Material UI
-import { Avatar, Box, CardMedia, Grid, Typography } from "@mui/material";
+import { Box, Button, CardMedia, Grid, Link, Typography } from "@mui/material";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 
 //Personal
 import { HomeLayout } from "../components/layouts/HomeLayout";
@@ -30,10 +31,41 @@ const AboutPage = ({ title, menu, footer, about }) => {
           {about.title}
         </Typography>
         <Grid container spacing={5} my={5}>
-          <Grid item xs={12} md={8}>
-            <Typography>
-              Hola, Soy Jose un desarrollador web Full-Stack del pais de Chile
-            </Typography>
+          <Grid
+            item
+            xs={12}
+            md={8}
+            display="flex"
+            flexDirection={"column"}
+            justifyContent="space-around"
+          >
+            <Box>
+              {about.description.map((d, i) => (
+                <div key={i}>
+                  <Typography fontSize={{ md: "2vw" }}>{d}</Typography>
+                  <br />
+                </div>
+              ))}
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Link href="/archivos/cv/CV-Jose-Mella-2022.pdf" download={true}>
+                <Button
+                  variant="outlined"
+                  size="large"
+                  color="secondary"
+                  endIcon={<FileDownloadOutlinedIcon />}
+                  sx={{ marginY: 2 }}
+                >
+                  {about.cv}
+                </Button>
+              </Link>
+            </Box>
           </Grid>
           <Grid item xs={12} md={4}>
             <CardMedia

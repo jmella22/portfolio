@@ -68,12 +68,12 @@
         "images": [
           "puppypoint-ShortLanding-dark.png",
           "puppypoint-ShortLanding-light.png",
+          "puppypoint-HomeAdmin-dark.png",
           "puppypoint-HomeOwner-dark.png",
-          "puppyponit-HomeWalker-light.png",
+          "puppypoint-HomeWalker-light.png",
           "puppypoint-Login-dark.png",
           "puppypoint-Paseos-dark.png",
-          "puppypoint-Blog-dark.png",
-          "puppyponit-HomeAdmin.dark.png"
+          "puppypoint-Blog-dark.png"
         ],
         "imagesFull": [],
         "links": [
@@ -182,7 +182,13 @@
   },
   "about": {
     "titlePage": "Jose Mella | About me",
-    "title": "About Me"
+    "title": "About Me",
+    "description": [
+      "I'm a Full-Stack developer located in Chile. I have a great passion for web development and I am constantly improving my knowledge.",
+      "Well-organised person, problem solver. Passionate about biking, the outdoors, cooking and the movies",
+      "Interested in projects that are challenging and allow creativity"
+    ],
+    "cv": "Download CV"
   },
   "notfound": {
     "titlePage": "Page Not Found",
