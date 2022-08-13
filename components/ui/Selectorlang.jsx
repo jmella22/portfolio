@@ -25,7 +25,7 @@ export const Selectorlang = () => {
           <CardMedia
             component={"img"}
             width={"50px"}
-            image={"/Images/language/espanol30.png"}
+            image={"/Images/language/chile30.png"}
             alt="español"
           />
         </MenuItem>

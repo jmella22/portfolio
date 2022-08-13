@@ -21,6 +21,9 @@ import {
   SiSequelize,
   SiMaterialui,
   SiChakraui,
+  SiVercel,
+  SiGithub,
+  SiVisualstudiocode,
 } from "react-icons/si";
 
 //Personal
@@ -46,6 +49,12 @@ export const SkillsList = ({ skills }) => {
     <SiSequelize key={11} style={{ fontSize: 120, color: `${color}` }} />,
     <SiMaterialui key={12} style={{ fontSize: 120, color: `${color}` }} />,
     <SiChakraui key={13} style={{ fontSize: 120, color: `${color}` }} />,
+    <SiVercel key={14} style={{ fontSize: 120, color: `${color}` }} />,
+    <SiGithub key={15} style={{ fontSize: 120, color: `${color}` }} />,
+    <SiVisualstudiocode
+      key={15}
+      style={{ fontSize: 120, color: `${color}` }}
+    />,
   ];
 
   return (

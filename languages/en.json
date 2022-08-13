@@ -2,7 +2,7 @@
   "menu": {
     "title": "Menu",
     "menu": ["Home", "About", "Skills", "Projects", "Contact"],
-    "linkMenu": ["/", "/#about", "/skills", "/projects", "/contact"],
+    "linkMenu": ["/", "/about", "/skills", "/projects", "/contact"],
     "mode": {
       "light": "Light Mode",
       "dark": "Dark Mode"
@@ -174,8 +174,15 @@
       ["CSS", "css.png"],
       ["Sequelize", "sequelize.png"],
       ["Material Ui", "materialUi.png"],
-      ["Chakra Ui", "chakraUi.png"]
+      ["Chakra Ui", "chakraUi.png"],
+      ["Vercel"],
+      ["GitHub"],
+      ["Visual Studio Code"]
     ]
+  },
+  "about": {
+    "titlePage": "Jose Mella | About me",
+    "title": "About Me"
   },
   "notfound": {
     "titlePage": "Page Not Found",

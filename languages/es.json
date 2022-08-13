@@ -2,7 +2,7 @@
   "menu": {
     "title": "Menú",
     "menu": ["Inicio", "Sobre MI", "Habilidades", "Proyectos", "Contacto"],
-    "linkMenu": ["/", "/#about", "/skills", "/projects", "/contact"],
+    "linkMenu": ["/", "/about", "/skills", "/projects", "/contact"],
     "mode": {
       "light": "Modo Claro",
       "dark": "Modo Oscuro"
@@ -12,14 +12,14 @@
     "title": "Un Proyecto de: ",
     "name": " José Mella"
   },
-  "home": {
-    "titlePage": "Jose Mella | Desarrollador web Full Stack"
-  },
   "hero": {
     "title1": "Hola, Soy",
     "title2": "Un Desarrollador Web Full-Stack",
     "subtitle": "Construyamos algo juntos",
     "body": "Soy un desarrollador web Full-Stack que se especializa en crear experiencias digitales excepcionales basadas en funcionalidades y diseño. Actualmente, estoy aprendiendo nuevas habilidades para mejorar mi perfil profesional."
+  },
+  "home": {
+    "titlePage": "Jose Mella | Desarrollador web Full Stack"
   },
   "projects": {
     "titlePage": "Jose Mella | Proyectos",
@@ -28,7 +28,7 @@
     "projects": [
       {
         "title": "Portfolio ",
-        "description": "Pagina de Portfolio personal",
+        "description": "Página de Portfolio personal",
         "descriptionFull": [
           "Aplicación que busca solucionar el prkblema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
         ],
@@ -174,8 +174,15 @@
       ["CSS", "css.png"],
       ["Sequelize", "sequelize.png"],
       ["Material Ui", "materialUi.png"],
-      ["Chakra Ui", "chakraUi.png"]
+      ["Chakra Ui", "chakraUi.png"],
+      ["Vercel"],
+      ["GitHub"],
+      ["Visual Studio Code"]
     ]
+  },
+  "about": {
+    "titlePage": "Jose Mella | Sobre mi",
+    "title": "Sobre Mi"
   },
   "notfound": {
     "titlePage": "Pagina No Encontrada",

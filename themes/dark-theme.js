@@ -76,8 +76,9 @@ export const darkTheme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "12px",
+          border: "2px solid transparent",
           ":hover": {
-            border: "1px solid #5bc0be",
+            border: "2px solid #5bc0be",
           },
         },
       },

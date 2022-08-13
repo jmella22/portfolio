@@ -26,7 +26,7 @@ import { SkillsList } from "../components/skills";
 const SkillsPage = ({ menu, title, footer, skills }) => {
   return (
     <HomeLayout menu={menu} title={title} footer={footer}>
-      <Box mt={10} sx={{ minHeight: "calc(100vh - 136px)" }}>
+      <Box mt={10} mb={5} sx={{ minHeight: "calc(100vh - 136px)" }}>
         <Typography
           textAlign={"center"}
           variant="h1"
