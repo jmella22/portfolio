@@ -1,5 +1,5 @@
 //React
-import React from "react";
+import React, { useState } from "react";
 
 //Next
 
@@ -11,6 +11,7 @@ import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 
 //Personal
 import { HomeLayout } from "../components/layouts/HomeLayout";
+import { LoadingScreem } from "../components/ui/LoadingScreem";
 
 const AboutPage = ({ title, menu, footer, about }) => {
   return (

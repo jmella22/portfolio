@@ -11,7 +11,7 @@ import { Box, Typography } from "@mui/material";
 //Personal
 import { HomeLayout } from "../../components/layouts";
 import { ProjectList } from "../../components/products";
-const ProjectsPage = ({ title, menu, footer, projects }) => {
+const ProjectsPage = ({ title, menu, footer, projects, utils }) => {
   return (
     <HomeLayout title={title} menu={menu} footer={footer}>
       <Box mt={10} sx={{ minHeight: "calc(100vh - 136px)" }}>
@@ -24,7 +24,7 @@ const ProjectsPage = ({ title, menu, footer, projects }) => {
         >
           {projects.title}
         </Typography>
-        <ProjectList projects={projects} />
+        <ProjectList projects={projects} utils={utils} />
       </Box>
     </HomeLayout>
   );
@@ -40,6 +40,7 @@ export const getStaticProps = async ({ locale }) => {
       contact: response.contact,
       footer: response.footer,
       projects: response.projects,
+      utils: response.utils,
     },
   };
 };

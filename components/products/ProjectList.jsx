@@ -11,11 +11,11 @@ import { ProjectCard } from ".";
 
 //Personal
 
-export const ProjectList = ({ projects }) => {
+export const ProjectList = ({ projects, utils }) => {
   return (
     <Grid container spacing={4}>
       {projects.projects.map((project, i) => (
-        <ProjectCard project={project} key={i} />
+        <ProjectCard project={project} key={i} utils={utils} />
       ))}
     </Grid>
   );

@@ -28,11 +28,12 @@
     "projects": [
       {
         "title": "Portfolio ",
+        "slug": "portfolio",
         "description": "Página de Portfolio personal",
         "descriptionFull": [
           "Aplicación que busca solucionar el prkblema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
         ],
-        "tecnologi": ["Nextjs", "Javascript", "Material Ui", "Mailjs"],
+        "tecnology": ["Nextjs", "Javascript", "Material Ui", "Mailjs"],
         "images": [
           "porfolio-ShortHome-dark-en.png",
           "porfolio-ShortHome-light-es.png"
@@ -44,12 +45,13 @@
         ]
       },
       {
-        "title": "Puppu Point ",
+        "title": "Puppy Point ",
+        "slug": "puppy_point",
         "description": "Aplicacion que conecta a paseadores de perros con personas que requieren de ese servicio",
         "descriptionFull": [
           "Aplicación que busca solucionar el problema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
         ],
-        "tecnologi": [
+        "tecnology": [
           "Reacjs",
           "Javascript",
           "Redux",
@@ -83,11 +85,12 @@
       },
       {
         "title": "Pokemon App ",
+        "slug": "pokemon_app",
         "description": "Aplicacion que se alimenta de la Api de Pokemon",
         "descriptionFull": [
           "Aplicación que muestra en pantalla los distintos pokemons que existen, donde podras ver su detalle y agregarlos a favoritos."
         ],
-        "tecnologi": ["Nextjs", "Typescript", "Next Ui", "Pokemon Api"],
+        "tecnology": ["Nextjs", "Typescript", "Next Ui", "Pokemon Api"],
         "images": [
           "pokemonApp-Home-dark.png",
           "pokemonApp-Home-light.png",
@@ -104,30 +107,17 @@
       },
       {
         "title": "Wather App ",
+        "slug": "wather_app",
         "description": "Aplicacion que muestra el clima de distintas ciudades",
         "descriptionFull": [
           "Aplicación que busca solucionar el prkblema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
         ],
-        "tecnologi": ["Reacjs", "Javascript", "CSS", "HTML"],
+        "tecnology": ["Reacjs", "Javascript", "CSS Module"],
         "images": ["watherApp-Home.png", "watherApp-Ciudades.png"],
         "imagesFull": [],
         "links": [
           "https://weather-app-jmella22.vercel.app/",
           "https://github.com/jmella22/weather-app"
-        ]
-      },
-      {
-        "title": "Wather App ",
-        "description": "Aplicacion que muestra el clima de distintas ciudades",
-        "descriptionFull": [
-          "Aplicación que busca solucionar el prkblema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
-        ],
-        "tecnologi": ["Reacjs", "Javascript", "CSS", "HTML"],
-        "images": ["watherApp-Home.png", "watherApp-Ciudades.png"],
-        "imagesFull": [],
-        "links": [
-          "https://puppypoint.vercel.app/",
-          "https://github.com/jmella22/Puppy-Point"
         ]
       }
     ]
@@ -161,23 +151,28 @@
   "skills": {
     "titlePage": "Jose Mella | Habilidades",
     "title": "Habilidades",
+    "description": "Es importante mantenerse actualizado a las tecnologias más demandadas y usadas. Como desarrollador aquí algunas de las tecnologias con las que he trabajado",
     "skills": [
-      ["Reacjs", "reactjs.png"],
-      ["Nextjs", "nextjs.png"],
-      ["Redux", "redux.png"],
-      ["Javascript", "javascript.png"],
-      ["Typescript", "typescript.png"],
-      ["Nodejs", "nodejs.png"],
-      ["Expressjs", "expressjs.png"],
-      ["PostgreSQL", "posgresql.png"],
-      ["HTML", "html.png"],
-      ["CSS", "css.png"],
-      ["Sequelize", "sequelize.png"],
-      ["Material Ui", "materialUi.png"],
-      ["Chakra Ui", "chakraUi.png"],
-      ["Vercel"],
-      ["GitHub"],
-      ["Visual Studio Code"]
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Typescript",
+      "Reacjs",
+      "Nextjs",
+      "Redux",
+      "Nodejs",
+      "Expressjs",
+      "Sequelize",
+      "PostgreSQL",
+      "MongoDB",
+      "Firebase",
+      "bootstrap",
+      "Material Ui",
+      "Chakra Ui",
+      "Docker",
+      "Vercel",
+      "GitHub",
+      "Visual Studio Code"
     ]
   },
   "about": {
@@ -193,5 +188,13 @@
   "notfound": {
     "titlePage": "Pagina No Encontrada",
     "title": "Página No Encontrada"
+  },
+  "utils": {
+    "repository": "Repositorio",
+    "site": "Sitio Web",
+    "close": "Cerrar",
+    "tecnology": "Tecnologias utilizadas",
+    "description": "Descripción",
+    "images": "Imagenes"
   }
 }

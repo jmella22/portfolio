@@ -36,6 +36,9 @@ const SkillsPage = ({ menu, title, footer, skills }) => {
         >
           {skills.title}
         </Typography>
+        <Typography fontSize={{ md: "2vw" }} my={2} width={{ md: "90%" }}>
+          {skills.description}
+        </Typography>
         <SkillsList skills={skills} />
       </Box>
     </HomeLayout>

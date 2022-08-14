@@ -27,7 +27,7 @@ export const SkillCard = ({ skill, icon }) => {
       </Card>
       <Box textAlign={"center"} className="fadeIn">
         <Typography fontWeight={700} mb={1} mt={2}>
-          {skill[0]}
+          {skill}
         </Typography>
       </Box>
     </Grid>

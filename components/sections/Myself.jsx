@@ -24,7 +24,7 @@ export const Myself = ({ myself }) => {
           {myself.title}
         </Typography>
         {myself.description.map((d, i) => (
-          <div key={1}>
+          <div key={i}>
             <Typography>{d}</Typography>
             <br />
           </div>
