@@ -25,15 +25,20 @@ export const HomeLayout = ({
     <>
       <Head>
         <title>{title}</title>
+        <meta name="author" content="Jose Mella" />
         <meta name="description" content={pageDescription} />
+
+        <meta
+          name="keywords"
+          content={`desarrollo web, web, developer, frontend, backend, fullStack, portfolio`}
+        />
+
         <meta property="og:title" content={title} />
         <meta property="og:description" content={pageDescription} />
-        {imageFullUrl && (
-          <meta
-            property="og:image"
-            content={`${origin}/Images/projects/portfolio-ShortHome-dark-en.png`}
-          />
-        )}
+        <meta
+          property="og:image"
+          content={`${origin}/Images/seo/porfolio-ShortHome-dark-en.png`}
+        />
       </Head>
       <nav>
         <Navbar menu={menu} />
