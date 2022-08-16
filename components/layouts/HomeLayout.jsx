@@ -26,11 +26,11 @@ export const HomeLayout = ({
       <Head>
         <title>{title}</title>
         <meta name="description" content={pageDescription} />
-        <meta name="og:title" content={title} />
-        <meta name="og:description" content={pageDescription} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={pageDescription} />
         {imageFullUrl && (
           <meta
-            name="og:image"
+            property="og:image"
             content={`${origin}/Images/projects/portfolio-ShortHome-dark-en.png`}
           />
         )}
