@@ -11,24 +11,9 @@ import React from "react";
 import { HomeLayout } from "../components/layouts/HomeLayout";
 import { Contact, Hero, Myself, Projects } from "../components/sections";
 
-const prueba = ({
-  title,
-  menu,
-  hero,
-  projects,
-  myself,
-  contact,
-  footer,
-  descriptionPage,
-}) => {
+const prueba = ({ title, menu, hero, projects, myself, contact, footer }) => {
   return (
-    <HomeLayout
-      title={title}
-      menu={menu}
-      footer={footer}
-      imageFullUrl={"/Images/projects/portfolio-ShortHome-dark-en-png"}
-      descriptionPage={descriptionPage}
-    >
+    <HomeLayout title={title} menu={menu} footer={footer} imageFullUrl={true}>
       <Hero hero={hero} />
       <Projects projects={projects} />
       <Myself myself={myself} />

@@ -16,7 +16,7 @@ const origin = typeof window === "undefined" ? "" : window.location.origin;
 export const HomeLayout = ({
   children,
   title = "Jose Mella | Developer Web",
-  pageDescription = "Jose Mella | Developer Web",
+  pageDescription = "Porfolio Profesional de Jose Mella Desarrollador Web Full-Stack",
   imageFullUrl,
   menu,
   footer,
@@ -29,7 +29,10 @@ export const HomeLayout = ({
         <meta name="og:title" content={title} />
         <meta name="og:description" content={pageDescription} />
         {imageFullUrl && (
-          <meta name="og:iamge" content={`${origin}${imageFullUrl}`} />
+          <meta
+            name="og:image"
+            content={`${origin}/Images/projects/portfolio-ShortHome-dark-en.png`}
+          />
         )}
       </Head>
       <nav>
