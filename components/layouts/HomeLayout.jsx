@@ -17,7 +17,7 @@ export const HomeLayout = ({
   children,
   title = "Jose Mella | Developer Web",
   pageDescription = "Porfolio Profesional de Jose Mella Desarrollador Web Full-Stack",
-  imageFullUrl,
+  imageFullUrl = false,
   menu,
   footer,
 }) => {
@@ -36,7 +36,8 @@ export const HomeLayout = ({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={pageDescription} />
         <meta
-          property="og:image"
+          property="og:image:secure_url"
+          itemprop="image"
           content={`${origin}/Images/seo/porfolio-ShortHome-dark-en.png`}
         />
       </Head>
