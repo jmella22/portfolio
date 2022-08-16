@@ -11,6 +11,8 @@ import Head from "next/head";
 //Personal
 import { Footer, Navbar, Sidemenu } from "../ui";
 
+const origin = typeof window === "undefined" ? "" : window.location.origin;
+
 export const HomeLayout = ({
   children,
   title = "Jose Mella | Developer Web",
@@ -26,7 +28,9 @@ export const HomeLayout = ({
         <meta name="description" content={pageDescription} />
         <meta name="og:title" content={title} />
         <meta name="og:description" content={pageDescription} />
-        {imageFullUrl && <meta name="og:iamge" content={imageFullUrl} />}
+        {imageFullUrl && (
+          <meta name="og:iamge" content={`${origin}${imageFullUrl}`} />
+        )}
       </Head>
       <nav>
         <Navbar menu={menu} />
