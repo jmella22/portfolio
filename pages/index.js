@@ -11,9 +11,24 @@ import React from "react";
 import { HomeLayout } from "../components/layouts/HomeLayout";
 import { Contact, Hero, Myself, Projects } from "../components/sections";
 
-const prueba = ({ title, menu, hero, projects, myself, contact, footer }) => {
+const prueba = ({
+  title,
+  menu,
+  hero,
+  projects,
+  myself,
+  contact,
+  footer,
+  descriptionPage,
+}) => {
   return (
-    <HomeLayout title={title} menu={menu} footer={footer}>
+    <HomeLayout
+      title={title}
+      menu={menu}
+      footer={footer}
+      imageFullUrl={"/Images/projects/portfolio-ShortHome-dark-en-png"}
+      descriptionPage={descriptionPage}
+    >
       <Hero hero={hero} />
       <Projects projects={projects} />
       <Myself myself={myself} />
@@ -39,6 +54,7 @@ export const getStaticProps = async ({ locale }) => {
       myself: response.myself,
       contact: response.contact,
       footer: response.footer,
+      descriptionPage: response.home.descriptionPage,
     },
   };
 };
