@@ -37,7 +37,7 @@ export const HomeLayout = ({
         <meta property="og:description" content={pageDescription} />
         <meta
           property="og:image:secure_url"
-          itemprop="image"
+          itemProp="image"
           content={`${origin}/Images/seo/porfolio-ShortHome-dark-en.png`}
         />
       </Head>
