@@ -78,7 +78,7 @@ const AboutPage = ({ layout, page, utils }) => {
           <Grid item xs={12} md={4}>
             <CardMedia
               component={"img"}
-              image={"/images/about/myself.jpg"}
+              image={"/imgs/about/myself.jpg"}
               alt={"Jose Mella"}
             />
           </Grid>
