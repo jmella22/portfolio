@@ -24,7 +24,6 @@ export const ProjectCard = ({ project, utils }) => {
   const { title, descriptionSmall, isOnline, imagesMain } = project;
 
   const [isOpen, setIsOpen] = useState(false);
-  const [isImageLoaded, setIsImageLoaded] = useState(true);
 
   const handleClose = () => {
     setIsOpen(false);
@@ -37,18 +36,14 @@ export const ProjectCard = ({ project, utils }) => {
           <CardActionArea>
             <CardMedia
               component={"img"}
-              image={`/Images/projects/${imagesMain}`}
+              image={`/imgs/projectsimg/${imagesMain}`}
               alt={title}
               className="fadeIn"
               onClick={() => setIsOpen(true)}
-              // onLoad={() => setIsImageLoaded(true)}
             />
           </CardActionArea>
         </Card>
-        <Box
-          sx={{ mt: 1, display: isImageLoaded ? "block" : "none" }}
-          className="fadeIn"
-        >
+        <Box sx={{ mt: 1, display: "block" }} className="fadeIn">
           <Typography fontWeight={700} mb={1} mt={1}>
             {title}
           </Typography>

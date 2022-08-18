@@ -33,15 +33,15 @@
           "projectsSlice": [
             {
               "title": "Puppy Point",
-              "image": "puppyPoint-ShortLanding-light.png"
+              "image": "puppyPointShortLandingLight.png"
             },
             {
               "title": "Pokemon App",
-              "image": "pokemonApp-Home-dark.png"
+              "image": "pokemonAppHomeDark.png"
             },
             {
               "title": "Wather App",
-              "image": "watherApp-Ciudades.png"
+              "image": "watherAppCities.png"
             }
           ]
         },
@@ -151,10 +151,10 @@
               "webSite": "https://puppypoint.vercel.app/",
               "repository": "https://github.com/jmella22/Puppy-Point"
             },
-            "imagesMain": "puppyPoint-ShortLanding-light.png",
+            "imagesMain": "puppyPointShortLandingLight.png",
             "images": [
-              "puppyPoint-ShortLanding-light.png",
-              "puppyPoint-Blog-dark.png"
+              "puppyPointShortLandingLight.png",
+              "puppyPointBlogDark.png"
             ]
           },
           {
@@ -176,14 +176,14 @@
               "webSite": "https://nextjs-pokemon-app-151.vercel.app/",
               "repository": "https://github.com/jmella22/nextjs-pokemon-app"
             },
-            "imagesMain": "pokemonApp-Home-dark.png",
+            "imagesMain": "pokemonAppHomeDark.png",
             "images": [
-              "pokemonApp-Home-dark.png",
-              "pokemonApp-Home-light.png",
-              "pokemonApp-Detalle-dark.png",
-              "pokemonApp-Detalle-light.png",
-              "pokemonApp-Favorito-dark.png",
-              "pokemonApp-Favorito-light.png"
+              "pokemonAppHomeDark.png",
+              "pokemonAppHomeLight.png",
+              "pokemonAppDetailDark.png",
+              "pokemonAppDetailLight.png",
+              "pokemonAppFavoriteDark.png",
+              "pokemonAppFavoriteLight.png"
             ]
           },
           {
@@ -204,8 +204,8 @@
               "webSite": "https://weather-app-jmella22.vercel.app/",
               "repository": "https://github.com/jmella22/weather-app"
             },
-            "imagesMain": "watherApp-Home.png",
-            "images": ["watherApp-Home.png", "watherApp-Ciudades.png"]
+            "imagesMain": "watherAppHome.png",
+            "images": ["watherAppHome.png", "watherAppCities.png"]
           }
         ]
       }

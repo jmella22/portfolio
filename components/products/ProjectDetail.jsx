@@ -170,7 +170,7 @@ export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
                     mb={1}
                     width={"90%"}
                     component={"img"}
-                    image={`/Images/projects/${m}`}
+                    image={`/imgs/projectsimg/${m}`}
                     alt="hola"
                   />
                 </Card>
