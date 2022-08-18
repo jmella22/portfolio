@@ -1,8 +1,9 @@
 //React
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 //Next
 import NextLink from "next/link";
+import { useRouter } from "next/router";
 
 //Other library
 
@@ -26,6 +27,10 @@ import { Selectorlang } from ".";
 
 export const Navbar = ({ menu }) => {
   const { colorMode, toogleColorMode, toogleSideMenu } = useContext(UiContext);
+
+  const [pageSelect, setPageSelect] = useState("/");
+
+  const router = useRouter();
 
   const onChangeMode = (e) => {
     e.preventDefault();

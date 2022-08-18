@@ -6,7 +6,7 @@ import React, { useContext } from "react";
 //Other Library
 
 //Material Ui
-import { Grid, Typography } from "@mui/material";
+import { Grid, iconButtonClasses } from "@mui/material";
 import {
   SiReact,
   SiRedux,
@@ -68,7 +68,7 @@ export const SkillsList = ({ skills }) => {
   return (
     <Grid container spacing={4}>
       {skills.skills.map((skill, i) => (
-        <SkillCard key={i} skill={skill} icon={icons[i]} />
+        <SkillCard key={i} skill={skill} icon={icons[i]} index={i} />
       ))}
     </Grid>
   );

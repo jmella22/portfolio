@@ -49,22 +49,22 @@
 }
 
 .twitter:hover {
-  border-color: #00acee;
-  background-color: #00acee;
+  border-color: #00acee !important;
+  background-color: #00acee !important;
 }
 
 .linkedin:hover {
-  border-color: #0e76a8;
-  background-color: #0e76a8;
+  border-color: #0e76a8 !important;
+  background-color: #0e76a8 !important;
+}
+
+.github:hover {
+  border-color: #c9510c !important;
+  background-color: #c9510c !important;
 }
 
 .heigth-section {
   height: calc(100vh - 100px);
-}
-
-.github:hover {
-  border-color: #c9510c;
-  background-color: #c9510c;
 }
 
 .modal {
