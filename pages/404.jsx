@@ -65,7 +65,7 @@ export const getStaticProps = async ({ locale }) => {
 
   return {
     props: {
-      layout: layouts.HomeLayout,
+      layout: layouts.homeLayout,
       page: pages.nofound,
       utils,
     },
