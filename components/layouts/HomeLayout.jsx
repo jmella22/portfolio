@@ -16,17 +16,18 @@ const origin = typeof window === "undefined" ? "" : window.location.origin;
 export const HomeLayout = ({
   children,
   title = "Jose Mella | Developer Web",
-  pageDescription = "Porfolio Profesional de Jose Mella Desarrollador Web Full-Stack",
-  imageFullUrl = false,
-  menu,
-  footer,
+  layout,
+  utils,
+  description,
 }) => {
+  const { menu, footer } = layout;
+
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="author" content="Jose Mella" />
-        <meta name="description" content={pageDescription} />
+        <meta name="description" content={description} />
 
         <meta
           name="keywords"
@@ -34,7 +35,7 @@ export const HomeLayout = ({
         />
 
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:description" content={description} />
         <meta
           property="og:image:secure_url"
           itemProp="image"
@@ -44,7 +45,7 @@ export const HomeLayout = ({
       <nav>
         <Navbar menu={menu} />
       </nav>
-      <Sidemenu menu={menu} />
+      <Sidemenu menu={menu} utils={utils} />
       <main
         style={{
           margin: "auto",

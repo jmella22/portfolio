@@ -24,7 +24,9 @@ import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import { isValidEmail } from "../../utils";
 import { UiContext } from "../../contexts";
 
-export const Contact = ({ contact }) => {
+export const Contact = ({ contact, utils }) => {
+  const formError = utils.errors.form;
+
   const { colorMode } = useContext(UiContext);
   const [isSend, setIsSend] = useState(false);
 
@@ -64,7 +66,7 @@ export const Contact = ({ contact }) => {
   };
 
   const isEmail = (email) => {
-    return isValidEmail(email) ? undefined : contact.error.email[1];
+    return isValidEmail(email) ? undefined : formError.email[1];
   };
 
   return (
@@ -91,10 +93,10 @@ export const Contact = ({ contact }) => {
                 variant="outlined"
                 fullWidth
                 {...register("name", {
-                  required: contact.error.name[0],
+                  required: formError.name[0],
                   minLength: {
                     value: 2,
-                    message: contact.error.name[1],
+                    message: formError.name[1],
                   },
                 })}
                 error={!!errors.name}
@@ -109,7 +111,7 @@ export const Contact = ({ contact }) => {
                 type={"email"}
                 fullWidth
                 {...register("email", {
-                  required: contact.error.email[0],
+                  required: formError.email[0],
                   validate: isEmail,
                 })}
                 error={!!errors.email}
@@ -124,10 +126,10 @@ export const Contact = ({ contact }) => {
                 type={"text"}
                 fullWidth
                 {...register("subject", {
-                  required: contact.error.subject[0],
+                  required: formError.subject[0],
                   minLength: {
                     value: 2,
-                    message: contact.error.subject[1],
+                    message: formError.subject[1],
                   },
                 })}
                 error={!!errors.subject}
@@ -143,10 +145,10 @@ export const Contact = ({ contact }) => {
                 fullWidth
                 multiline
                 {...register("message", {
-                  required: contact.error.message[0],
+                  required: formError.message[0],
                   minLength: {
                     value: 2,
-                    message: contact.error.message[1],
+                    message: formError.message[1],
                   },
                 })}
                 error={!!errors.message}
@@ -162,7 +164,7 @@ export const Contact = ({ contact }) => {
             color="secondary"
             size="large"
           >
-            {contact.submit}
+            {utils.submit}
           </Button>
         </Box>
       </form>
@@ -192,7 +194,7 @@ export const Contact = ({ contact }) => {
           }}
         >
           <Typography variant="h4" component="h2" mb={4}>
-            {contact.modal}
+            {utils.modalContact}
           </Typography>
           <Avatar sx={{ bgcolor: "transparent", width: 120, height: 120 }}>
             <CheckCircleOutlinedIcon color="secondary" sx={{ fontSize: 120 }} />

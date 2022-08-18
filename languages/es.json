@@ -1,201 +1,258 @@
 {
-  "menu": {
-    "title": "Menú",
-    "menu": ["Inicio", "Sobre MI", "Habilidades", "Proyectos", "Contacto"],
-    "linkMenu": ["/", "/about", "/skills", "/projects", "/contact"],
-    "mode": {
-      "light": "Modo Claro",
-      "dark": "Modo Oscuro"
+  "layouts": {
+    "homeLayout": {
+      "menu": {
+        "title": "Menú",
+        "menuLists": [
+          { "name": "Inicio", "link": "/" },
+          { "name": "Sobre Mi", "link": "/about" },
+          { "name": "Habilidades", "link": "/skills" },
+          { "name": "Proyectos", "link": "/projects" },
+          { "name": "Contacto", "link": "/contact" }
+        ]
+      },
+      "footer": {
+        "title": "Un Proyecto de: ",
+        "name": " José Mella"
+      }
     }
   },
-  "footer": {
-    "title": "Un Proyecto de: ",
-    "name": " José Mella"
-  },
-  "hero": {
-    "title1": "Hola, Soy",
-    "title2": "Un Desarrollador Web Full-Stack",
-    "subtitle": "Construyamos algo juntos",
-    "body": "Soy un desarrollador web Full-Stack que se especializa en crear experiencias digitales excepcionales basadas en funcionalidades y diseño. Actualmente, estoy aprendiendo nuevas habilidades para mejorar mi perfil profesional."
-  },
-  "home": {
-    "titlePage": "Jose Mella | Desarrollador web Full Stack",
-    "descriptionPage": "Portfolio Profesional de Jose Mella Desarrollador Web Full Stack"
-  },
-  "projects": {
-    "titlePage": "Jose Mella | Proyectos",
-    "title": "Proyectos",
-    "more": "Ver Más",
-    "projects": [
-      {
-        "title": "Portfolio ",
-        "slug": "portfolio",
-        "description": "Página de Portfolio personal",
-        "descriptionFull": [
-          "Aplicación que busca solucionar el prkblema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
-        ],
-        "tecnology": ["Nextjs", "Javascript", "Material Ui", "Mailjs"],
-        "images": [
-          "porfolio-ShortHome-dark-en.png",
-          "porfolio-ShortHome-light-es.png"
-        ],
-        "imagesFull": [],
-        "links": [
-          "https://portfolio-jmella22.vercel.app/",
-          "https://github.com/jmella22/portfolio"
-        ]
-      },
-      {
-        "title": "Puppy Point ",
-        "slug": "puppy_point",
-        "description": "Aplicacion que conecta a paseadores de perros con personas que requieren de ese servicio",
-        "descriptionFull": [
-          "Aplicación que busca solucionar el problema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
-        ],
-        "tecnology": [
-          "Reacjs",
-          "Javascript",
-          "Redux",
-          "Nodejs",
-          "Expressjs",
-          "PosgreSQL",
-          "Sequelize",
-          "MercadoPago",
-          "Nodemailer",
-          "Handlebars",
-          "JWT",
-          "Chakra UI",
-          "Chart JS",
-          "Geolocation"
-        ],
-        "images": [
-          "puppypoint-ShortLanding-dark.png",
-          "puppypoint-ShortLanding-light.png",
-          "puppypoint-HomeOwner-dark.png",
-          "puppyponit-HomeWalker-light.png",
-          "puppypoint-Login-dark.png",
-          "puppypoint-Paseos-dark.png",
-          "puppypoint-Blog-dark.png",
-          "puppyponit-HomeAdmin.dark.png"
-        ],
-        "imagesFull": [],
-        "links": [
-          "https://puppypoint.vercel.app/",
-          "https://github.com/jmella22/Puppy-Point"
-        ]
-      },
-      {
-        "title": "Pokemon App ",
-        "slug": "pokemon_app",
-        "description": "Aplicacion que se alimenta de la Api de Pokemon",
-        "descriptionFull": [
-          "Aplicación que muestra en pantalla los distintos pokemons que existen, donde podras ver su detalle y agregarlos a favoritos."
-        ],
-        "tecnology": ["Nextjs", "Typescript", "Next Ui", "Pokemon Api"],
-        "images": [
-          "pokemonApp-Home-dark.png",
-          "pokemonApp-Home-light.png",
-          "pokemonApp-Detalle-dark.png",
-          "pokemonApp-Detalle-light.png",
-          "pokemonApp-Favorito-dark.png",
-          "pokemonApp-Favorito-light.png"
-        ],
-        "imagesFull": [],
-        "links": [
-          "https://nextjs-pokemon-app-151.vercel.app/",
-          "https://github.com/jmella22/nextjs-pokemon-app"
-        ]
-      },
-      {
-        "title": "Wather App ",
-        "slug": "wather_app",
-        "description": "Aplicacion que muestra el clima de distintas ciudades",
-        "descriptionFull": [
-          "Aplicación que busca solucionar el prkblema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
-        ],
-        "tecnology": ["Reacjs", "Javascript", "CSS Module"],
-        "images": ["watherApp-Home.png", "watherApp-Ciudades.png"],
-        "imagesFull": [],
-        "links": [
-          "https://weather-app-jmella22.vercel.app/",
-          "https://github.com/jmella22/weather-app"
+  "pages": {
+    "home": {
+      "title": "Jose Mella | Desarrollador web Full Stack",
+      "description": "Portfolio Profesional de Jose Mella Desarrollador Web Full Stack",
+      "body": {
+        "hero": {
+          "title1": "Hola, Soy",
+          "title2": "Un Desarrollador Web Full-Stack",
+          "subtitle": "Construyamos algo juntos",
+          "body": "Soy un desarrollador web Full-Stack que se especializa en crear experiencias digitales excepcionales basadas en funcionalidades y diseño. Actualmente, estoy aprendiendo nuevas habilidades para mejorar mi perfil profesional."
+        },
+        "projects": {
+          "title": "Proyectos",
+          "projectsSlice": [
+            {
+              "title": "Puppy Point",
+              "image": "puppyPoint-ShortLanding-light.png"
+            },
+            {
+              "title": "Pokemon App",
+              "image": "pokemonApp-Home-dark.png"
+            },
+            {
+              "title": "Wather App",
+              "image": "watherApp-Ciudades.png"
+            }
+          ]
+        },
+        "about": {
+          "title": "Yo y El Desarrollador",
+          "description": [
+            "Desde que tuve mi primer computador me intereso el mundo tecnologico y  cuando entre a la universidad decidí estudiar electricidad, estudios que me sirvieron para formar mi constancía, mis ganas de aprender y superarme.",
+            "Con él tiempo retome mis ganas por el mundo tecnologico y el año 2022 decidí estudiar desarrollo web en un bootcamp, el cual he complementado aprendiendo de forma autonoma.",
+            "Acompañame en este camino donde estoy siempre deseoso de seguir trabajando y aprendiendo más."
+          ]
+        },
+        "contact": {
+          "title": "Contacto",
+          "form": {
+            "name": "Nombre",
+            "email": "Correo",
+            "subject": "Asunto",
+            "message": "Mensaje"
+          }
+        }
+      }
+    },
+    "about": {
+      "title": "Jose Mella | Sobre Mi",
+      "description": "Portfolio Profesional de Jose Mella Desarrollador Web Full Stack",
+      "body": {
+        "title": "Sobre Mi",
+        "description": [
+          "Soy un desarrollador Full-Stack ubicado en Chile. Tengo una gran pasión por el desarrollo web y constantemente estoy mejorando mis conocimientos.",
+          "Soy una persona Organizada, solucionador de problemas. Aficionado a pasear en bicicleta, el aire libre, cocinar y el cine.",
+          "Estoy interesado en proyectos desafiantes y que permitan la cratividad"
         ]
       }
-    ]
-  },
-  "myself": {
-    "title": "Yo y El Desarrollador",
-    "description": [
-      "Desde que tuve mi primer computador me intereso el mundo tecnologico y  cuando entre a la universidad decidí estudiar electricidad, estudios que me sirvieron para formar mi constancía, mis ganas de aprender y superarme.",
-      "Con él tiempo retome mis ganas por el mundo tecnologico y el año 2022 decidí estudiar desarrollo web en un bootcamp, el cual he complementado aprendiendo de forma autonoma.",
-      "Acompañame en este camino donde estoy siempre deseoso de seguir trabajando y aprendiendo más."
-    ]
-  },
-  "contact": {
-    "titlePage": "Jose Mella | Contacto",
-    "title": "Contacto",
-    "submit": "Enviar",
-    "form": {
-      "name": "Nombre",
-      "email": "Correo",
-      "subject": "Asunto",
-      "message": "Mensaje"
     },
-    "error": {
-      "name": ["El Nombre es requerido", "Deben ser mínimo 2 caracteres"],
-      "email": ["El Correo es requerido", "El correo no parece ser válido"],
-      "subject": ["El Asunto es requerido", "Deben ser mínimo 2 caracteres"],
-      "message": ["El Mensaje es requerido", "Deben ser mínimo 2 caracteres"]
+    "skills": {
+      "title": "Jose Mella | Habilidades",
+      "description": "Portfolio Profesional de Jose Mella Desarrollador Web Full Stack",
+      "body": {
+        "title": "Habilidades",
+        "description": "Es importante mantenerse actualizado a las tecnologias más demandadas y usadas. Como desarrollador aquí algunas de las tecnologias con las que he trabajado",
+        "skills": [
+          { "name": "Leguajes", "technologies": ["Javascript", "Typescript"] },
+          {
+            "name": "FrontEnd",
+            "technologies": [
+              "HTML",
+              "CSS",
+              "Reactjs",
+              "Redux",
+              "Nextjs",
+              "Bootstrap",
+              "Material Ui",
+              "Chakra Ui"
+            ]
+          },
+          {
+            "name": "BackEnd",
+            "technologies": ["Nodejs", "Express", "Sequelize"]
+          },
+          {
+            "name": "Base de Datos",
+            "technologies": ["PostgreSQL", "MongoDB", "Firebase"]
+          },
+          { "name": "Control de Versión", "technologies": ["Git", "GitHub"] },
+          {
+            "name": "gestion de Proyectos",
+            "technologies": ["Trello", "Slack", "Jira"]
+          },
+          {
+            "name": "Otras",
+            "technologies": ["Docker", "Vercel", "Visual Studio Code"]
+          }
+        ]
+      }
     },
-    "modal": "Correo enviado exitosalemten!"
-  },
-  "skills": {
-    "titlePage": "Jose Mella | Habilidades",
-    "title": "Habilidades",
-    "description": "Es importante mantenerse actualizado a las tecnologias más demandadas y usadas. Como desarrollador aquí algunas de las tecnologias con las que he trabajado",
-    "skills": [
-      "HTML",
-      "CSS",
-      "Javascript",
-      "Typescript",
-      "Reacjs",
-      "Nextjs",
-      "Redux",
-      "Nodejs",
-      "Expressjs",
-      "Sequelize",
-      "PostgreSQL",
-      "MongoDB",
-      "Firebase",
-      "bootstrap",
-      "Material Ui",
-      "Chakra Ui",
-      "Docker",
-      "Vercel",
-      "GitHub",
-      "Visual Studio Code"
-    ]
-  },
-  "about": {
-    "titlePage": "Jose Mella | Sobre mi",
-    "title": "Sobre Mi",
-    "description": [
-      "Soy un desarrollador Full-Stack ubicado en Chile. Tengo una gran pasión por el desarrollo web y constantemente estoy mejorando mis conocimientos.",
-      "Soy una persona Organizada, solucionador de problemas. Aficionado a pasear en bicicleta, el aire libre, cocinar y el cine.",
-      "Estoy interesado en proyectos desafiantes y que permitan la cratividad"
-    ],
-    "cv": "Descargar CV"
-  },
-  "notfound": {
-    "titlePage": "Pagina No Encontrada",
-    "title": "Página No Encontrada"
+    "projects": {
+      "title": "Jose Mella | Proyectos",
+      "description": "Portfolio Profesional de Jose Mella Desarrollador Web Full Stack",
+      "body": {
+        "title": "Proyectos",
+        "projects": [
+          {
+            "title": "Puppy Point",
+            "descriptionSmall": "Aplicacion que conecta a paseadores de perros con personas que requieren de ese servicio",
+            "descriptionFull": [
+              "Aplicación que busca solucionar el problema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
+            ],
+            "isOnlie": true,
+            "repository": true,
+            "technologies": [
+              "Reacjs",
+              "Javascript",
+              "Redux",
+              "Nodejs",
+              "Expressjs",
+              "PosgreSQL",
+              "Sequelize",
+              "MercadoPago",
+              "Nodemailer",
+              "Handlebars",
+              "JWT",
+              "Chakra UI",
+              "Chart JS",
+              "Geolocation"
+            ],
+            "links": {
+              "webSite": "https://puppypoint.vercel.app/",
+              "repository": "https://github.com/jmella22/Puppy-Point"
+            },
+            "imagesMain": "puppyPoint-ShortLanding-light.png",
+            "images": [
+              "puppyPoint-ShortLanding-light.png",
+              "puppyPoint-Blog-dark.png"
+            ]
+          },
+          {
+            "title": "Pokemon App",
+            "descriptionSmall": "Aplicacion que se alimenta de la Api de Pokemon",
+            "descriptionFull": [
+              "Aplicación que muestra en pantalla los distintos pokemons que existen, donde podras ver su detalle y agregarlos a favoritos."
+            ],
+            "isOnlie": true,
+            "repository": true,
+            "technologies": [
+              "Nextjs",
+              "Typescript",
+              "Next Ui",
+              "Pokemon Api",
+              "Confetti"
+            ],
+            "links": {
+              "webSite": "https://nextjs-pokemon-app-151.vercel.app/",
+              "repository": "https://github.com/jmella22/nextjs-pokemon-app"
+            },
+            "imagesMain": "pokemonApp-Home-dark.png",
+            "images": [
+              "pokemonApp-Home-dark.png",
+              "pokemonApp-Home-light.png",
+              "pokemonApp-Detalle-dark.png",
+              "pokemonApp-Detalle-light.png",
+              "pokemonApp-Favorito-dark.png",
+              "pokemonApp-Favorito-light.png"
+            ]
+          },
+          {
+            "title": "Wather App",
+            "descriptionSmall": "Aplicacion que muestra el clima de distintas ciudades",
+            "descriptionFull": [
+              "Aplicacion que muestra el clima de distintas ciudades"
+            ],
+            "isOnlie": true,
+            "repository": true,
+            "technologies": [
+              "Reacjs",
+              "Javascript",
+              "CSS Module",
+              "Weaher Api"
+            ],
+            "links": {
+              "webSite": "https://weather-app-jmella22.vercel.app/",
+              "repository": "https://github.com/jmella22/weather-app"
+            },
+            "imagesMain": "watherApp-Home.png",
+            "images": ["watherApp-Home.png", "watherApp-Ciudades.png"]
+          }
+        ]
+      }
+    },
+    "contact": {
+      "title": "Jose Mella | Contacto",
+      "description": "Portfolio Profesional de Jose Mella Desarrollador Web Full Stack",
+      "body": {
+        "title": "Contacto",
+        "formC": {
+          "name": "Nombre",
+          "email": "Correo",
+          "subject": "Asunto",
+          "message": "Mensaje"
+        }
+      }
+    },
+    "nofound": {
+      "title": "Jose Mella | Pagina No Encontrada",
+      "description": "Portfolio Profesional de Jose Mella Desarrollador Web Full Stack",
+      "body": {
+        "title": "Página No Encontrada"
+      }
+    }
   },
   "utils": {
     "repository": "Repositorio",
     "site": "Sitio Web",
     "close": "Cerrar",
-    "tecnology": "Tecnologias utilizadas",
+    "technologies": "Tecnologias utilizadas",
     "description": "Descripción",
-    "images": "Imagenes"
+    "images": "Imagenes",
+    "mode": {
+      "light": "Modo Claro",
+      "dark": "Modo Oscuro"
+    },
+    "more": "Ver Más",
+    "submit": "Enviar",
+    "modalContact": "Correo enviado exitosalemten!",
+    "cv": "Descargar CV",
+    "errors": {
+      "form": {
+        "name": ["El Nombre es requerido", "Deben ser mínimo 2 caracteres"],
+        "email": ["El Correo es requerido", "El correo no parece ser válido"],
+        "subject": ["El Asunto es requerido", "Deben ser mínimo 2 caracteres"],
+        "message": ["El Mensaje es requerido", "Deben ser mínimo 2 caracteres"]
+      }
+    }
   }
 }

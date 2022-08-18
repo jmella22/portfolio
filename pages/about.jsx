@@ -13,9 +13,16 @@ import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import { HomeLayout } from "../components/layouts/HomeLayout";
 import { LoadingScreem } from "../components/ui/LoadingScreem";
 
-const AboutPage = ({ title, menu, footer, about }) => {
+const AboutPage = ({ layout, page, utils }) => {
+  const { title, description } = page.body;
+
   return (
-    <HomeLayout title={title} menu={menu} footer={footer}>
+    <HomeLayout
+      title={page.title}
+      description={page.description}
+      layout={layout}
+      utils={utils}
+    >
       <Box
         mt={10}
         sx={{
@@ -29,7 +36,7 @@ const AboutPage = ({ title, menu, footer, about }) => {
           fontSize={"5vw"}
           mb={2}
         >
-          {about.title}
+          {title}
         </Typography>
         <Grid container spacing={5} my={5}>
           <Grid
@@ -41,7 +48,7 @@ const AboutPage = ({ title, menu, footer, about }) => {
             justifyContent="space-around"
           >
             <Box>
-              {about.description.map((d, i) => (
+              {description.map((d, i) => (
                 <div key={i}>
                   <Typography fontSize={{ md: "2vw" }}>{d}</Typography>
                   <br />
@@ -63,7 +70,7 @@ const AboutPage = ({ title, menu, footer, about }) => {
                   endIcon={<FileDownloadOutlinedIcon />}
                   sx={{ marginY: 2 }}
                 >
-                  {about.cv}
+                  {utils.cv}
                 </Button>
               </Link>
             </Box>
@@ -71,7 +78,7 @@ const AboutPage = ({ title, menu, footer, about }) => {
           <Grid item xs={12} md={4}>
             <CardMedia
               component={"img"}
-              image={"/Images/about/myself.jpg"}
+              image={"/images/about/myself.jpg"}
               alt={"Jose Mella"}
             />
           </Grid>
@@ -87,14 +94,13 @@ const AboutPage = ({ title, menu, footer, about }) => {
 //- The data can be publicly cached (not user-specific).
 //- The page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance.
 export const getStaticProps = async ({ locale }) => {
-  const response = await import(`../languages/${locale}.json`); // your fetch function here
+  const { layouts, pages, utils } = await import(`../languages/${locale}.json`); // your fetch function here
 
   return {
     props: {
-      title: response.about.titlePage,
-      menu: response.menu,
-      footer: response.footer,
-      about: response.about,
+      layout: layouts.homeLayout,
+      page: pages.about,
+      utils,
     },
   };
 };

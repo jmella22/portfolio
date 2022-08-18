@@ -11,13 +11,19 @@ import React from "react";
 import { HomeLayout } from "../components/layouts/HomeLayout";
 import { Contact, Hero, Myself, Projects } from "../components/sections";
 
-const prueba = ({ title, menu, hero, projects, myself, contact, footer }) => {
+const HomePage = ({ layout, page, utils }) => {
+  const { hero, projects, about, contact } = page.body;
   return (
-    <HomeLayout title={title} menu={menu} footer={footer} imageFullUrl={true}>
-      <Hero hero={hero} />
-      <Projects projects={projects} />
-      <Myself myself={myself} />
-      <Contact contact={contact} />
+    <HomeLayout
+      title={page.title}
+      description={page.description}
+      layout={layout}
+      utils={utils}
+    >
+      <Hero hero={hero} utils={utils} />
+      <Projects projects={projects} utils={utils} />
+      <Myself myself={about} utils={utils} />
+      <Contact contact={contact} utils={utils} />
     </HomeLayout>
   );
 };
@@ -28,20 +34,15 @@ const prueba = ({ title, menu, hero, projects, myself, contact, footer }) => {
 //- The data can be publicly cached (not user-specific).
 //- The page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance.
 export const getStaticProps = async ({ locale }) => {
-  const response = await import(`../languages/${locale}.json`); // your fetch function here
+  const { layouts, pages, utils } = await import(`../languages/${locale}.json`); // your fetch function here
 
   return {
     props: {
-      title: response.home.titlePage,
-      menu: response.menu,
-      hero: response.hero,
-      projects: response.projects,
-      myself: response.myself,
-      contact: response.contact,
-      footer: response.footer,
-      descriptionPage: response.home.descriptionPage,
+      layout: layouts.homeLayout,
+      page: pages.home,
+      utils,
     },
   };
 };
 
-export default prueba;
+export default HomePage;

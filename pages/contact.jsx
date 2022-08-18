@@ -24,7 +24,10 @@ import { HomeLayout } from "../components/layouts";
 import { isValidEmail } from "../utils";
 import { UiContext } from "../contexts";
 
-const ContactPage = ({ title, menu, contact, footer }) => {
+const ContactPage = ({ layout, page, utils }) => {
+  const { title, formC } = page.body;
+  const formError = utils.errors.form;
+
   const { colorMode } = useContext(UiContext);
   const [isSend, setIsSend] = useState(false);
 
@@ -64,11 +67,16 @@ const ContactPage = ({ title, menu, contact, footer }) => {
   };
 
   const isEmail = (email) => {
-    return isValidEmail(email) ? undefined : contact.error.email[1];
+    return isValidEmail(email) ? undefined : formError.email[1];
   };
 
   return (
-    <HomeLayout title={title} menu={menu} footer={footer}>
+    <HomeLayout
+      title={page.title}
+      description={page.description}
+      layout={layout}
+      utils={utils}
+    >
       <Box mt={10} sx={{ minHeight: "calc(100vh - 136px)" }}>
         <Typography
           textAlign={"center"}
@@ -77,7 +85,7 @@ const ContactPage = ({ title, menu, contact, footer }) => {
           fontSize={"5vw"}
           mb={2}
         >
-          {contact.title}
+          {title}
         </Typography>
         <form onSubmit={handleSubmit(onSendMail)} noValidate ref={form}>
           <Box
@@ -92,16 +100,16 @@ const ContactPage = ({ title, menu, contact, footer }) => {
             <Grid container spacing={2} sx={{ mt: 2 }}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  label={contact.form.name}
+                  label={formC.name}
                   name="name"
                   type={"text"}
                   variant="outlined"
                   fullWidth
                   {...register("name", {
-                    required: contact.error.name[0],
+                    required: formError.name[0],
                     minLength: {
                       value: 2,
-                      message: contact.error.name[1],
+                      message: formError.name[1],
                     },
                   })}
                   error={!!errors.name}
@@ -110,13 +118,13 @@ const ContactPage = ({ title, menu, contact, footer }) => {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  label={contact.form.email}
+                  label={formC.email}
                   name="email"
                   variant="outlined"
                   type={"email"}
                   fullWidth
                   {...register("email", {
-                    required: contact.error.email[0],
+                    required: formError.email[0],
                     validate: isEmail,
                   })}
                   error={!!errors.email}
@@ -125,16 +133,16 @@ const ContactPage = ({ title, menu, contact, footer }) => {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  label={contact.form.subject}
+                  label={formC.subject}
                   name="subject"
                   variant="outlined"
                   type={"text"}
                   fullWidth
                   {...register("subject", {
-                    required: contact.error.subject[0],
+                    required: formError.subject[0],
                     minLength: {
                       value: 2,
-                      message: contact.error.subject[1],
+                      message: formError.subject[1],
                     },
                   })}
                   error={!!errors.subject}
@@ -143,17 +151,17 @@ const ContactPage = ({ title, menu, contact, footer }) => {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  label={contact.form.message}
+                  label={formC.message}
                   name="message"
                   variant="outlined"
                   type={"text"}
                   fullWidth
                   multiline
                   {...register("message", {
-                    required: contact.error.message[0],
+                    required: formError.message[0],
                     minLength: {
                       value: 2,
-                      message: contact.error.message[1],
+                      message: formError.message[1],
                     },
                   })}
                   error={!!errors.message}
@@ -169,7 +177,7 @@ const ContactPage = ({ title, menu, contact, footer }) => {
               color="secondary"
               size="large"
             >
-              {contact.submit}
+              {utils.submit}
             </Button>
           </Box>
         </form>
@@ -199,7 +207,7 @@ const ContactPage = ({ title, menu, contact, footer }) => {
             }}
           >
             <Typography variant="h4" component="h2" mb={4}>
-              {contact.modal}
+              {utils.modal}
             </Typography>
             <Avatar sx={{ bgcolor: "transparent", width: 120, height: 120 }}>
               <CheckCircleOutlinedIcon
@@ -215,14 +223,13 @@ const ContactPage = ({ title, menu, contact, footer }) => {
 };
 
 export const getStaticProps = async ({ locale }) => {
-  const response = await import(`../languages/${locale}.json`); // your fetch function here
+  const { layouts, pages, utils } = await import(`../languages/${locale}.json`); // your fetch function here
 
   return {
     props: {
-      title: response.contact.titlePage,
-      menu: response.menu,
-      contact: response.contact,
-      footer: response.footer,
+      layout: layouts.homeLayout,
+      page: pages.contact,
+      utils,
     },
   };
 };

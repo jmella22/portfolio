@@ -30,6 +30,16 @@ import { FaGithub } from "react-icons/fa";
 import { UiContext } from "../../contexts";
 
 export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
+  const {
+    title,
+    descriptionFull,
+    isOnline,
+    repository,
+    technologies,
+    links,
+    images,
+  } = project;
+
   const { colorMode } = useContext(UiContext);
 
   return (
@@ -69,7 +79,7 @@ export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
           }}
         >
           <Typography fontSize={"5vw"} color="secondary" fontWeight={600}>
-            {project.title}
+            {title}
           </Typography>
           <Tooltip
             onClick={handleClose}
@@ -90,7 +100,7 @@ export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
             mb: 2,
           }}
         >
-          <Link href={project.links[0]} target={"_blank"} rel="noopener">
+          <Link href={links.webSite} target={"_blank"} rel="noopener">
             <Button
               variant="outlined"
               className={"linkedin"}
@@ -99,7 +109,7 @@ export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
               {utils.site}
             </Button>
           </Link>
-          <Link href={project.links[1]} target={"_blank"} rel="noopener">
+          <Link href={links.repository} target={"_blank"} rel="noopener">
             <Button
               variant="outlined"
               className={"github"}
@@ -111,7 +121,7 @@ export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
         </Stack>
 
         <Typography fontWeight={600} fontSize="large" mb={2}>
-          {utils.tecnology}
+          {utils.technologies}
         </Typography>
         <Box
           sx={{
@@ -126,7 +136,7 @@ export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
           }}
         >
           <Grid container spacing={2} padding={2} justifyContent="Center">
-            {project.tecnology.map((t, i) => (
+            {technologies.map((t, i) => (
               <Grid item xs={4} md={3} lg={2} key={i}>
                 <Chip
                   label={t}

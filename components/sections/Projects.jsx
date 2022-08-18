@@ -13,7 +13,7 @@ import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 //Personal
 import { ProjectsSlice } from "../products";
 
-export const Projects = ({ projects }) => {
+export const Projects = ({ projects, utils }) => {
   const router = useRouter();
 
   const handleNavigate = () => {
@@ -25,7 +25,7 @@ export const Projects = ({ projects }) => {
       <Typography variant="h1" color={"secondary"} fontSize={"4vw"} mb={2}>
         {projects.title}
       </Typography>
-      <ProjectsSlice projects={projects.projects} />
+      <ProjectsSlice projects={projects.projectsSlice} />
       <Box
         sx={{
           display: "flex",
@@ -41,7 +41,7 @@ export const Projects = ({ projects }) => {
           onClick={handleNavigate}
           sx={{ marginY: 2 }}
         >
-          {projects.more}
+          {utils.more}
         </Button>
       </Box>
     </Box>

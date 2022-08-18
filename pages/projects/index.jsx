@@ -11,9 +11,15 @@ import { Box, Typography } from "@mui/material";
 //Personal
 import { HomeLayout } from "../../components/layouts";
 import { ProjectList } from "../../components/products";
-const ProjectsPage = ({ title, menu, footer, projects, utils }) => {
+const ProjectsPage = ({ layout, page, utils }) => {
+  const { title, projects } = page.body;
   return (
-    <HomeLayout title={title} menu={menu} footer={footer}>
+    <HomeLayout
+      title={page.title}
+      description={page.description}
+      layout={layout}
+      utils={utils}
+    >
       <Box mt={10} sx={{ minHeight: "calc(100vh - 136px)" }}>
         <Typography
           textAlign={"center"}
@@ -22,7 +28,7 @@ const ProjectsPage = ({ title, menu, footer, projects, utils }) => {
           fontSize={"5vw"}
           mb={2}
         >
-          {projects.title}
+          {title}
         </Typography>
         <ProjectList projects={projects} utils={utils} />
       </Box>
@@ -31,18 +37,16 @@ const ProjectsPage = ({ title, menu, footer, projects, utils }) => {
 };
 
 export const getStaticProps = async ({ locale }) => {
-  const response = await import(`../../languages/${locale}.json`); // your fetch function here
+  const { layouts, pages, utils } = await import(
+    `../../languages/${locale}.json`
+  ); // your fetch function here
 
   return {
     props: {
-      title: response.projects.titlePage,
-      menu: response.menu,
-      contact: response.contact,
-      footer: response.footer,
-      projects: response.projects,
-      utils: response.utils,
+      layout: layouts.homeLayout,
+      page: pages.projects,
+      utils,
     },
   };
 };
-
 export default ProjectsPage;

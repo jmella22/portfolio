@@ -21,8 +21,10 @@ import {
 import { ProjectDetail } from ".";
 
 export const ProjectCard = ({ project, utils }) => {
+  const { title, descriptionSmall, isOnline, imagesMain } = project;
+
   const [isOpen, setIsOpen] = useState(false);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(true);
 
   const handleClose = () => {
     setIsOpen(false);
@@ -35,11 +37,11 @@ export const ProjectCard = ({ project, utils }) => {
           <CardActionArea>
             <CardMedia
               component={"img"}
-              image={`/Images/projects/${project.images[1]}`}
-              alt={project.title}
+              image={`/Images/projects/${imagesMain}`}
+              alt={title}
               className="fadeIn"
               onClick={() => setIsOpen(true)}
-              onLoad={() => setIsImageLoaded(true)}
+              // onLoad={() => setIsImageLoaded(true)}
             />
           </CardActionArea>
         </Card>
@@ -48,10 +50,10 @@ export const ProjectCard = ({ project, utils }) => {
           className="fadeIn"
         >
           <Typography fontWeight={700} mb={1} mt={1}>
-            {project.title}
+            {title}
           </Typography>
           <Typography fontWeight={500} mb={1}>
-            {project.description}
+            {descriptionSmall}
           </Typography>
         </Box>
       </Grid>

@@ -12,9 +12,16 @@ import SentimentDissatisfiedOutlinedIcon from "@mui/icons-material/SentimentDiss
 //Personal
 import { HomeLayout } from "../components/layouts/HomeLayout";
 
-const Custom404page = ({ title, menu, footer, notfound }) => {
+const Custom404page = ({ layout, page, utils }) => {
+  const { title } = page.body;
+
   return (
-    <HomeLayout title={title} menu={menu} footer={footer}>
+    <HomeLayout
+      title={page.title}
+      description={page.description}
+      layout={layout}
+      utils={utils}
+    >
       <Box
         mt={10}
         sx={{
@@ -35,7 +42,7 @@ const Custom404page = ({ title, menu, footer, notfound }) => {
           mt={5}
           sx={{ fontSize: "6vw" }}
         >
-          {notfound.title}
+          {title}
         </Typography>
         <Avatar sx={{ bgcolor: "transparent", width: 120, height: 120 }}>
           <SentimentDissatisfiedOutlinedIcon
@@ -54,14 +61,13 @@ const Custom404page = ({ title, menu, footer, notfound }) => {
 //- The data can be publicly cached (not user-specific).
 //- The page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance.
 export const getStaticProps = async ({ locale }) => {
-  const response = await import(`../languages/${locale}.json`); // your fetch function here
+  const { layouts, pages, utils } = await import(`../languages/${locale}.json`); // your fetch function here
 
   return {
     props: {
-      title: response.notfound.titlePage,
-      menu: response.menu,
-      footer: response.footer,
-      notfound: response.notfound,
+      layout: layouts.HomeLayout,
+      page: pages.nofound,
+      utils,
     },
   };
 };

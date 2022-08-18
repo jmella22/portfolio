@@ -38,7 +38,10 @@ const iconMenu = [
   <EmailOutlinedIcon key={"4"} />,
 ];
 
-export const Sidemenu = ({ menu }) => {
+export const Sidemenu = ({ menu, utils }) => {
+  const { title, menuLists } = menu;
+  const { mode } = utils;
+
   const { isMenuOpen, toogleSideMenu, colorMode, toogleColorMode } =
     useContext(UiContext);
   const router = useRouter();
@@ -63,15 +66,15 @@ export const Sidemenu = ({ menu }) => {
     >
       <Box sx={{ width: 250, paddingTop: 1 }}>
         <List>
-          <ListSubheader>{menu.title}</ListSubheader>
-          {menu.menu.map((m, i) => (
+          <ListSubheader>{title}</ListSubheader>
+          {menuLists.map((menuItem, i) => (
             <ListItem
               key={i}
               button
-              onClick={(e) => navigateTo(menu.linkMenu[i], e)}
+              onClick={(e) => navigateTo(menuItem.link, e)}
             >
               <ListItemIcon key={1}>{iconMenu[i]}</ListItemIcon>
-              <ListItemText primary={m} />
+              <ListItemText primary={menuItem.name} />
             </ListItem>
           ))}
           <Divider />
@@ -81,14 +84,14 @@ export const Sidemenu = ({ menu }) => {
                 <ListItemIcon>
                   <LightModeOutlinedIcon />
                 </ListItemIcon>
-                <ListItemText primary={menu.mode.light} />
+                <ListItemText primary={mode.light} />
               </>
             ) : (
               <>
                 <ListItemIcon>
                   <NightlightRoundOutlinedIcon />
                 </ListItemIcon>
-                <ListItemText primary={menu.mode.dark} />
+                <ListItemText primary={mode.dark} />
               </>
             )}
           </ListItem>

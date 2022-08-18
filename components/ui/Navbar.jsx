@@ -1,9 +1,8 @@
 //React
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 //Next
 import NextLink from "next/link";
-import { useRouter } from "next/router";
 
 //Other library
 
@@ -26,11 +25,9 @@ import { UiContext } from "../../contexts";
 import { Selectorlang } from ".";
 
 export const Navbar = ({ menu }) => {
+  const { menuLists } = menu;
+
   const { colorMode, toogleColorMode, toogleSideMenu } = useContext(UiContext);
-
-  const [pageSelect, setPageSelect] = useState("/");
-
-  const router = useRouter();
 
   const onChangeMode = (e) => {
     e.preventDefault();
@@ -49,10 +46,10 @@ export const Navbar = ({ menu }) => {
         </NextLink>
         <Box flex={1} />
         <Box className="fadeIn" sx={{ display: { xs: "none", md: "flex" } }}>
-          {menu.menu.map((m, i) => (
-            <NextLink href={`${menu.linkMenu[i]}`} passHref key={i}>
+          {menuLists.map((menuItem, i) => (
+            <NextLink href={`${menuItem.link}`} passHref key={i}>
               <Link>
-                <Button color="info">{m}</Button>
+                <Button color="info">{menuItem.name}</Button>
               </Link>
             </NextLink>
           ))}

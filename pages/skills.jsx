@@ -23,9 +23,16 @@ import CheckCircleOutlinedIcon from "@mui/icons-material/CheckCircleOutlined";
 import { HomeLayout } from "../components/layouts";
 import { UiContext } from "../contexts";
 import { SkillsList } from "../components/skills";
-const SkillsPage = ({ menu, title, footer, skills }) => {
+const SkillsPage = ({ layout, page, utils }) => {
+  const { title, description, skills } = page.body;
+
   return (
-    <HomeLayout menu={menu} title={title} footer={footer}>
+    <HomeLayout
+      title={page.title}
+      description={page.description}
+      layout={layout}
+      utils={utils}
+    >
       <Box mt={10} mb={5} sx={{ minHeight: "calc(100vh - 136px)" }}>
         <Typography
           textAlign={"center"}
@@ -34,10 +41,15 @@ const SkillsPage = ({ menu, title, footer, skills }) => {
           fontSize={"5vw"}
           mb={2}
         >
-          {skills.title}
+          {title}
         </Typography>
-        <Typography fontSize={{ md: "2vw" }} my={2} width={{ md: "90%" }}>
-          {skills.description}
+        <Typography
+          fontSize={{ md: "2vw" }}
+          my={2}
+          width={{ md: "90%" }}
+          mb={5}
+        >
+          {description}
         </Typography>
         <SkillsList skills={skills} />
       </Box>
@@ -46,15 +58,13 @@ const SkillsPage = ({ menu, title, footer, skills }) => {
 };
 
 export const getStaticProps = async ({ locale }) => {
-  const response = await import(`../languages/${locale}.json`); // your fetch function here
+  const { layouts, pages, utils } = await import(`../languages/${locale}.json`); // your fetch function here
 
   return {
     props: {
-      title: response.skills.titlePage,
-      menu: response.menu,
-      contact: response.contact,
-      footer: response.footer,
-      skills: response.skills,
+      layout: layouts.homeLayout,
+      page: pages.skills,
+      utils,
     },
   };
 };
