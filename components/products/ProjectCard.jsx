@@ -12,6 +12,7 @@ import {
   Card,
   CardActionArea,
   CardMedia,
+  Chip,
   Grid,
   Link,
   Typography,
@@ -34,6 +35,18 @@ export const ProjectCard = ({ project, utils }) => {
       <Grid item xs={12} sm={6} md={4}>
         <Card>
           <CardActionArea>
+            {!isOnline && (
+              <Chip
+                color="error"
+                label={utils.deployed}
+                sx={{
+                  position: "absolute",
+                  zIndex: 99,
+                  top: "10px",
+                  right: "10px",
+                }}
+              />
+            )}
             <CardMedia
               component={"img"}
               image={`/imgs/projectsimg/${imagesMain}`}

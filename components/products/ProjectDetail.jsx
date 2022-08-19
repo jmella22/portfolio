@@ -7,7 +7,6 @@ import React, { useContext } from "react";
 
 //Material Ui
 import {
-  AppBar,
   Box,
   Button,
   Card,
@@ -51,6 +50,7 @@ export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
         transition: "all 0.5s ease-out",
         overflow: "scroll",
       }}
+      className={"scroll"}
     >
       <Box
         sx={{
@@ -100,24 +100,46 @@ export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
             mb: 2,
           }}
         >
-          <Link href={links.webSite} target={"_blank"} rel="noopener">
+          {isOnline ? (
+            <Link href={links.webSite} target={"_blank"} rel="noopener">
+              <Button
+                variant="outlined"
+                className={"linkedin"}
+                startIcon={<MdOutlineAdsClick />}
+              >
+                {utils.site}
+              </Button>
+            </Link>
+          ) : (
             <Button
               variant="outlined"
               className={"linkedin"}
               startIcon={<MdOutlineAdsClick />}
+              disabled
             >
               {utils.site}
             </Button>
-          </Link>
-          <Link href={links.repository} target={"_blank"} rel="noopener">
+          )}
+          {repository ? (
+            <Link href={links.repository} target={"_blank"} rel="noopener">
+              <Button
+                variant="outlined"
+                className={"github"}
+                startIcon={<FaGithub />}
+              >
+                {utils.repository}
+              </Button>
+            </Link>
+          ) : (
             <Button
               variant="outlined"
               className={"github"}
               startIcon={<FaGithub />}
+              disabled
             >
               {utils.repository}
             </Button>
-          </Link>
+          )}
         </Stack>
 
         <Typography fontWeight={600} fontSize="large" mb={2}>
@@ -152,7 +174,7 @@ export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
           {utils.description}
         </Typography>
         <Box mb={2} sx={{ width: "100%" }}>
-          {project.descriptionFull.map((d, i) => (
+          {descriptionFull.map((d, i) => (
             <Box key={i} sx={{ width: "90%", margin: "auto" }}>
               <Typography>{d}</Typography>
             </Box>
@@ -162,8 +184,8 @@ export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
           {utils.images}
         </Typography>
         <Box mb={2} sx={{ width: "100%" }}>
-          <Grid Container spacing={1}>
-            {project.images.map((m, i) => (
+          <Grid container spacing={1}>
+            {images.map((m, i) => (
               <Grid item xs={12} key={i}>
                 <Card sx={{ margin: 1, padding: 1 }}>
                   <CardMedia

@@ -129,7 +129,7 @@
             "descriptionFull": [
               "Aplicación que busca solucionar el problema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
             ],
-            "isOnlie": true,
+            "isOnline": true,
             "repository": true,
             "technologies": [
               "Reacjs",
@@ -160,7 +160,7 @@
             "descriptionFull": [
               "Aplicación que muestra en pantalla los distintos pokemons que existen, donde podras ver su detalle y agregarlos a favoritos."
             ],
-            "isOnlie": true,
+            "isOnline": true,
             "repository": true,
             "technologies": [
               "Nextjs",
@@ -189,7 +189,7 @@
             "descriptionFull": [
               "Aplicacion que muestra el clima de distintas ciudades"
             ],
-            "isOnlie": true,
+            "isOnline": true,
             "repository": true,
             "technologies": [
               "Reacjs",
@@ -203,6 +203,50 @@
             },
             "imagesMain": "watherAppHome.png",
             "images": ["watherAppHome.png", "watherAppCities.png"]
+          },
+          {
+            "title": "Almacen App",
+            "descriptionSmall": "Aplicacion para alamacen de barrio",
+            "descriptionFull": [
+              "Aplicacion que esta enfocado para alamacen de barrio, facil de implementar y de usar"
+            ],
+            "isOnline": true,
+            "repository": true,
+            "technologies": [
+              "Nextjs",
+              "Typescript",
+              "Chakra Ui",
+              "WhatsApp Api",
+              "Google Sheets"
+            ],
+            "links": {
+              "webSite": "https://almacen-app.vercel.app/",
+              "repository": "https://github.com/jmella22/almacen-app"
+            },
+            "imagesMain": "almacenAppShortHome.png",
+            "images": ["almacenAppHome.png"]
+          },
+          {
+            "title": "Open jira",
+            "descriptionSmall": "Aplicacion inspirada en Jira",
+            "descriptionFull": [
+              "Aplicacion que esta inspirada en Jira con sistema de drag and drop"
+            ],
+            "isOnline": false,
+            "repository": true,
+            "technologies": [
+              "Nextjs",
+              "Typescript",
+              "material Ui",
+              "Docker",
+              "MongoDB"
+            ],
+            "links": {
+              "webSite": "#",
+              "repository": "https://github.com/jmella22/next-openjira"
+            },
+            "imagesMain": "openJiraHome.png",
+            "images": ["openJiraHome.png", "openJiraDetail.png"]
           }
         ]
       }
@@ -243,6 +287,7 @@
     "submit": "Send",
     "modalContact": "Email sent successfully!",
     "cv": "Download CV",
+    "deployed": "Not Deployed",
     "errors": {
       "form": {
         "name": ["Name is required", "Must be at least 2 characters"],
