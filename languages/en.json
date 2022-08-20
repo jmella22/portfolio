@@ -247,6 +247,38 @@
             },
             "imagesMain": "openJiraHome.png",
             "images": ["openJiraHome.png", "openJiraDetail.png"]
+          },
+          {
+            "title": "Countries App",
+            "descriptionSmall": "Sigle Page Application de paises",
+            "descriptionFull": [
+              "Aplicacion de paises, que posee las funcines de: buscar paises por nombre, filtrar por continente, ordenar por numeros de habitantes y alfabeticamente"
+            ],
+            "isOnline": false,
+            "repository": true,
+            "technologies": [
+              "Reactjs",
+              "Redux",
+              "Javascript",
+              "CSS Module",
+              "Nodejs",
+              "Express",
+              "Countries Api",
+              "Sequelize",
+              "PosgreSQL"
+            ],
+            "links": {
+              "webSite": "#",
+              "repository": "https://github.com/jmella22/Countries-App"
+            },
+            "imagesMain": "countriesAppShortHome.png",
+            "images": [
+              "countriesAppHome.png",
+              "countriesAppCountryDetail.png",
+              "countriesAppCreateActivity.png",
+              "countriesAppLogin.png",
+              "countriesAppAbout.png"
+            ]
           }
         ]
       }

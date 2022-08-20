@@ -13,7 +13,7 @@ import { ProjectCard } from ".";
 
 export const ProjectList = ({ projects, utils }) => {
   return (
-    <Grid container spacing={4}>
+    <Grid container spacing={4} mb={5}>
       {projects.map((project, i) => (
         <ProjectCard project={project} key={i} utils={utils} />
       ))}
