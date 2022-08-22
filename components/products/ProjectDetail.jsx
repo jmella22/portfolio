@@ -193,7 +193,7 @@ export const ProjectDetail = ({ isOpen, handleClose, project, utils }) => {
                     width={"90%"}
                     component={"img"}
                     image={`/imgs/projectsimg/${m}`}
-                    alt="hola"
+                    alt={`${m}`}
                   />
                 </Card>
               </Grid>

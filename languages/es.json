@@ -40,8 +40,8 @@
               "image": "pokemonAppHomeDark.png"
             },
             {
-              "title": "Wather App",
-              "image": "watherAppCities.png"
+              "title": "Open Jira",
+              "image": "openJiraHome.png"
             }
           ]
         },
@@ -107,7 +107,7 @@
           },
           { "name": "Control de Versión", "technologies": ["Git", "GitHub"] },
           {
-            "name": "gestion de Proyectos",
+            "name": "Gestion de Proyectos",
             "technologies": ["Trello", "Slack", "Jira"]
           },
           {
@@ -127,7 +127,8 @@
             "title": "Puppy Point",
             "descriptionSmall": "Aplicacion que conecta a paseadores de perros con personas que requieren de ese servicio",
             "descriptionFull": [
-              "Aplicación que busca solucionar el problema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
+              "Aplicación que busca solucionar el problema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio.",
+              "Esta aplicacoón fue creada como proyecto final para el bootcamp de Soy Henry."
             ],
             "isOnline": true,
             "repository": true,
@@ -161,7 +162,12 @@
             "title": "Pokemon App",
             "descriptionSmall": "Aplicacion que se alimenta de la Api de Pokemon",
             "descriptionFull": [
-              "Aplicación que muestra en pantalla los distintos pokemons que existen, donde podras ver su detalle y agregarlos a favoritos."
+              "Aplicación que alimentandose de la Api de pokemon muestra en pantalla todos los Pokemons que existen.",
+              "Las funciones que tiene son:",
+              "-Listar todos los pokemones",
+              "-Mostrar Detalles de Pokemon",
+              "-Agregar o sacar de Favorito",
+              "-Cambio de modo dark/light"
             ],
             "isOnline": true,
             "repository": true,

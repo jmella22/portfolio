@@ -40,8 +40,8 @@
               "image": "pokemonAppHomeDark.png"
             },
             {
-              "title": "Wather App",
-              "image": "watherAppCities.png"
+              "title": "Open Jira",
+              "image": "openJiraHome.png"
             }
           ]
         },
@@ -125,7 +125,7 @@
         "projects": [
           {
             "title": "Puppy Point",
-            "descriptionSmall": "Aplicacion que conecta a paseadores de perros con personas que requieren de ese servicio",
+            "descriptionSmall": "Application that connects dog walkers with people who require that service",
             "descriptionFull": [
               "Aplicación que busca solucionar el problema de pasear perros, esto a través de conectar a pasadores de mascota con dueños de mascotas que requieran de este servicio"
             ],
@@ -152,7 +152,10 @@
               "repository": "https://github.com/jmella22/Puppy-Point"
             },
             "imagesMain": "puppyPointShortLandingLight.png",
-            "images": ["puppyPointLandingLight.png", "puppyPointBlogDark.png"]
+            "images": [
+              "puppyPointShortLandingLight.png",
+              "puppyPointBlogDark.png"
+            ]
           },
           {
             "title": "Pokemon App",
